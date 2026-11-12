@@ -23,7 +23,7 @@
     "url": "git+https://github.com/cocart-headless/cocart-mono-font.git"
   },
   "license": "OFL-1.1",
-  "author": "CoCart (https://cocartheadless.com)",
+  "author": "CoCart Headless (https://cocartheadless.com)",
   "main": "dist/cocart-mono.css",
   "style": "dist/cocart-mono.css",
   "jsdelivr": "dist/cocart-mono.css",

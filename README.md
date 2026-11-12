@@ -203,4 +203,4 @@ Bug reports, glyph requests, masking reports and native reviews are all welcome.
 
 CoCart Mono is licensed under the [SIL Open Font License 1.1](OFL.txt). You can use it, bundle it, embed it and modify it in anything you make, commercial or not. You can't sell the fonts on their own.
 
-© 2026 [CoCart](https://cocartheadless.com)
+© 2026 [CoCart Headless](https://cocartheadless.com)

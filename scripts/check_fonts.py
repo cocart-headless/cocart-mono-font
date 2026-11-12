@@ -8,6 +8,9 @@ Checks, per file:
   * every glyph advance is 0 or the 600-unit cell, and post.isFixedPitch is set
   * the font revision is the same across every file (and matches --version, if given),
     and name ID 5 reads "Version X.YYY" to match it
+  * name ID 0 (copyright) names the same year and holder as the first line of OFL.txt,
+    and name IDs 8 and 9 (manufacturer, designer) are that holder
+  * name ID 3 (unique ID) has no "CoCart:" label repeating the start of the font name
   * WOFF2 and OTF files map the same characters as their TTF twin
   * variable fonts carry a wght axis from 100 to 900
 Then every url() in fonts/css/*.css must resolve to a file.
@@ -47,6 +50,10 @@ VARIABLE_FAMILIES = {"CoCart-Mono": "CoCart Mono", "CoCart-Mono-Masked": "CoCart
 STATIC_DIRS = {"otf": ".otf", "ttf": ".ttf", "woff2": ".woff2"}
 
 GHA = os.environ.get("GITHUB_ACTIONS") == "true"
+
+# "Copyright 2026 CoCart Headless (https://…)" -> "2026 CoCart Headless"
+_ofl = re.match(r"Copyright (\d{4}(?:-\d{4})? [^(]+?)\s*(?:\(|$)", (ROOT / "OFL.txt").read_text(encoding="utf-8").splitlines()[0])
+COPYRIGHT_HOLDER = _ofl.group(1) if _ofl else None
 
 
 class Report:
@@ -175,6 +182,22 @@ def check_font(rep: Report, path: Path, meta: dict, revisions: dict, cmaps: dict
     for rec in font["name"].names:
         if rec.nameID == 5 and not rec.toUnicode().startswith(want):
             rep.error(path, f"name ID 5 is {rec.toUnicode()!r} (platform {rec.platformID}), expected {want!r}")
+
+    # Copyright notice: same year and holder as the first line of OFL.txt
+    holder = COPYRIGHT_HOLDER
+    for rec in font["name"].names:
+        if rec.nameID == 0 and holder and holder not in rec.toUnicode():
+            rep.error(path, f"name ID 0 is {rec.toUnicode()!r} (platform {rec.platformID}), expected it to name {holder!r} as in OFL.txt")
+    # Manufacturer (8) and designer (9): the holder's name, without the year
+    owner = holder.split(" ", 1)[1] if holder else None
+    for rec in font["name"].names:
+        if rec.nameID in (8, 9) and owner and rec.toUnicode() != owner:
+            rep.error(path, f"name ID {rec.nameID} is {rec.toUnicode()!r} (platform {rec.platformID}), expected {owner!r} as in OFL.txt")
+    # Unique ID (3): no "CoCart:" label in front of a name that already starts with CoCart
+    for rec in font["name"].names:
+        label = re.match(r"([^:;]+):(.*)", rec.toUnicode()) if rec.nameID == 3 else None
+        if label and label.group(2).startswith(label.group(1)):
+            rep.error(path, f"name ID 3 is {rec.toUnicode()!r} (platform {rec.platformID}), drop the {label.group(1) + ':'!r} label")
 
     revisions[round(font["head"].fontRevision, 3)].append(path)
     cmaps[(meta["stem"], meta["ext"])] = set(font.getBestCmap() or {})
