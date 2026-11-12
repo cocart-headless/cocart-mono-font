@@ -123,7 +123,7 @@ class Component extends DCLogic {
     return { all: false, single: true, scripts: [r.sheet], one: { name: one.name, example: r.example,
       intro: 'CoCart Mono is a monospaced typeface for shop prices, order numbers and codes. We need someone who reads ' + one.name + ' every day to tell us where our letters look wrong, unclear or odd. Nothing here needs design knowledge — read it as you would a receipt or a shop page.',
       pdf: 'review-sheets/CoCart-Mono-Review-' + one.name.replace(/\s+/g, '-') + '.pdf',
-      issue: 'https://github.com/cocart-headless/cocart-mono-font/issues/new?template=native-review.yml&labels=native+review&title=' + encodeURIComponent('Native review: ' + one.name),
+      issue: 'https://github.com/cocart-headless/cocart-mono-font/issues/new?template=native-review.yml&title=' + encodeURIComponent('Native review: ' + one.name) + '&language=' + encodeURIComponent(one.name + ' (' + one.native + ')'),
       mail: 'mailto:hello@cocartheadless.com?subject=' + encodeURIComponent('CoCart Mono review: ' + one.name) } };
   }
 }

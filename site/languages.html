@@ -271,7 +271,7 @@ class Component extends DCLogic {
       sheetUrl: 'review.html?lang=' + l.id,
       sheetLabel: 'Get the ' + l.name + ' review sheet',
       pdfUrl: 'review-sheets/CoCart-Mono-Review-' + l.name.replace(/\s+/g, '-') + '.pdf', pdfLabel: 'Download the ' + l.name + ' PDF',
-      reviewIssueUrl: this.GH + '?template=native-review.yml&labels=native+review&title=' + encodeURIComponent('Native review: ' + l.name),
+      reviewIssueUrl: this.GH + '?template=native-review.yml&title=' + encodeURIComponent('Native review: ' + l.name) + '&language=' + encodeURIComponent(l.name + ' (' + l.native + ')'),
       mailUrl: 'mailto:hello@cocartheadless.com?subject=' + encodeURIComponent('CoCart Mono review: ' + l.name),
       reviewUrl: this.issue('Native review: ' + l.name, 'I read ' + l.name + ' (' + l.native + ') and can review CoCart Mono.\n\nPlease send me the review sheet.', 'native review'),
       issueUrl: this.issue(l.name + ': ', 'Language: ' + l.name + ' (' + l.native + ')\nCharacter(s): \nWeight and style: \nWhat looks wrong: \n\nCoCart Mono ' + (D ? D.version : ''), 'language')
@@ -299,7 +299,7 @@ class Component extends DCLogic {
       sizes: [{ label: '10px', px: '10px' }, { label: '12px', px: '12px' }, { label: '16px', px: '16px' }, { label: '28px', px: '28px' }],
       query: this.state.query, onQuery: e => this.setState({ query: e.target.value }),
       hasMatches: !!matches.length, noMatches: !!q && !matches.length, matches,
-      requestLang: this.issue('Language request: ' + (this.state.query || ''), 'Language: ' + (this.state.query || '') + '\nScript: \nWhere you would use it: ', 'language request'),
+      requestLang: this.issue('Language request: ' + (this.state.query || ''), 'Language: ' + (this.state.query || '') + '\nScript: \nWhere you would use it: ', 'glyph-request'),
       text, onText: e => this.setState({ text: e.target.value }), segs,
       testOk: !miss.length, testBad: !!miss.length,
       testText: miss.length ? miss.length + ' of ' + uniq + ' characters not in CoCart Mono yet' : (uniq ? 'All ' + uniq + ' characters supported' : 'Type something to check it'),

@@ -25,7 +25,8 @@ jobs:
 
             // Issue forms render each field as "### Label\n\nAnswer".
             const answer = (heading) => {
-              const m = body.match(new RegExp(`###\\s+${heading}\\s*\\n+([\\s\\S]*?)(?=\\n###\\s|$)`, 'i'));
+              const h = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const m = body.match(new RegExp(`###\\s+${h}\\s*\\n+([\\s\\S]*?)(?=\\n###\\s|$)`, 'i'));
               return m ? m[1].trim() : '';
             };
 
@@ -48,16 +49,30 @@ jobs:
               labels.add(title.startsWith('Language request:') ? 'glyph-request' : 'language');
             }
 
-            // Native reviews: the language answer reads "Russian (Русский)". Label its script.
+            // Native reviews: the language answer reads "Russian (Русский)" when it comes from the
+            // languages page, but it's a text field, so match the English name loosely and only
+            // label a script for a language we know.
             const reviewScripts = {
+              latin: ['French', 'German', 'Spanish', 'Portuguese', 'Italian', 'Catalan', 'Dutch', 'Danish',
+                'Norwegian', 'Swedish', 'Finnish', 'Icelandic', 'Polish', 'Czech', 'Slovak', 'Hungarian',
+                'Romanian', 'Turkish', 'Azerbaijani', 'Croatian', 'Slovenian', 'Albanian', 'Lithuanian',
+                'Latvian', 'Estonian', 'Welsh', 'Esperanto', 'Uzbek', 'Vietnamese'],
               cyrillic: ['Russian', 'Ukrainian', 'Belarusian', 'Bulgarian', 'Serbian', 'Macedonian', 'Kazakh'],
               greek: ['Greek'], thai: ['Thai'], armenian: ['Armenian'], georgian: ['Georgian'],
             };
-            const language = answer('Language');
-            if (language && !language.startsWith('Other')) {
-              const name = language.split(' (')[0];
-              const found = Object.keys(reviewScripts).find((s) => reviewScripts[s].includes(name));
-              labels.add(`script: ${found || 'latin'}`);
+            const language = answer('Language').split(' (')[0].trim().toLowerCase();
+            const found = Object.keys(reviewScripts).find((s) => reviewScripts[s].some((n) => n.toLowerCase() === language));
+            if (found) labels.add(`script: ${found}`);
+
+            // Blank issues don't carry labels from the URL for most people; label native reviews here.
+            if (title.startsWith('Native review') && !body.includes('### ')) labels.add('native review');
+
+            // Native review form: the verdict dropdown starts on "Choose one", which isn't an answer.
+            const verdict = answer('Overall, does CoCart Mono read naturally in your language?');
+            const noVerdict = verdict === 'Choose one';
+            if (noVerdict) {
+              labels.delete('needs-triage');
+              labels.add('needs-info');
             }
 
             await github.rest.issues.addLabels({
@@ -65,6 +80,21 @@ jobs:
               issue_number: context.issue.number,
               labels: [...labels],
             });
+
+            if (noVerdict) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: context.issue.number,
+                body: [
+                  'Thanks for the review! One answer is missing: **Overall, does CoCart Mono read naturally in your language?** was left on "Choose one".',
+                  '',
+                  'Reply with one of these, or edit the issue to choose one:',
+                  '- Yes, it reads naturally',
+                  '- Mostly, with a few problems listed below',
+                  '- No, there are serious problems',
+                ].join('\n'),
+              });
+            }
 
   author-replied:
     name: Author replied

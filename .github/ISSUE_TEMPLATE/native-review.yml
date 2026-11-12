@@ -9,59 +9,24 @@ body:
         Thanks for checking our letters. Download your language's review sheet from https://cocart-headless.github.io/cocart-mono-font/languages.html, fill it in, then either attach the PDF below or copy your answers into this form. You don't need design knowledge — read it as you would a receipt or a shop page.
 
         Reviews aren't credited by name. If your review leads to a fix and you'd like credit, say so in the issue and you'll be listed in the release notes.
-  - type: dropdown
+  # A text field, not a dropdown: GitHub can only pre-fill text fields from the URL, and the
+  # languages page and review sheets link here with ?language=Italian%20(Italiano).
+  - type: input
     id: language
     attributes:
       label: Language
-      options:
-        - French (Français)
-        - German (Deutsch)
-        - Spanish (Español)
-        - Portuguese (Português)
-        - Italian (Italiano)
-        - Catalan (Català)
-        - Dutch (Nederlands)
-        - Danish (Dansk)
-        - Norwegian (Norsk)
-        - Swedish (Svenska)
-        - Finnish (Suomi)
-        - Icelandic (Íslenska)
-        - Polish (Polski)
-        - Czech (Čeština)
-        - Slovak (Slovenčina)
-        - Hungarian (Magyar)
-        - Romanian (Română)
-        - Turkish (Türkçe)
-        - Azerbaijani (Azərbaycanca)
-        - Croatian (Hrvatski)
-        - Slovenian (Slovenščina)
-        - Albanian (Shqip)
-        - Lithuanian (Lietuvių)
-        - Latvian (Latviešu)
-        - Estonian (Eesti)
-        - Welsh (Cymraeg)
-        - Esperanto (Esperanto)
-        - Uzbek (Oʻzbekcha)
-        - Vietnamese (Tiếng Việt)
-        - Russian (Русский)
-        - Ukrainian (Українська)
-        - Belarusian (Беларуская)
-        - Bulgarian (Български)
-        - Serbian (Српски)
-        - Macedonian (Македонски)
-        - Kazakh (Қазақша)
-        - Greek (Ελληνικά)
-        - Thai (ไทย)
-        - Armenian (Հայերեն)
-        - Georgian (ქართული)
-        - Other (say which below)
+      description: The language you reviewed. It's filled in for you when you come from the languages page or a review sheet.
+      placeholder: "Italian (Italiano)"
     validations:
       required: true
   - type: dropdown
     id: verdict
     attributes:
       label: Overall, does CoCart Mono read naturally in your language?
+      description: Pick one. The issue triage asks again if this is left on "Choose one".
+      # GitHub shows the first option as selected, so it must not be a real answer.
       options:
+        - Choose one
         - Yes, it reads naturally
         - Mostly, with a few problems listed below
         - No, there are serious problems
