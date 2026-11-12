@@ -1,0 +1,52 @@
+name: Font Bakery
+
+# An informational quality report from Font Bakery's universal profile.
+# It never blocks a merge: the blocking checks live in validate.yml.
+
+on:
+  pull_request:
+    paths: ["fonts/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fontbakery-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  report:
+    name: Report
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Font Bakery
+        run: pip install fontbakery
+
+      - name: Run the universal profile on the variable fonts
+        run: |
+          mkdir -p report
+          fontbakery check-universal --auto-jobs --loglevel WARN --succinct \
+            --html report/fontbakery.html --ghmarkdown report/fontbakery.md \
+            fonts/variable/*.ttf || true
+
+      - name: Add the report to the job summary
+        if: always()
+        run: |
+          if [ -f report/fontbakery.md ]; then
+            head -c 900000 report/fontbakery.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fontbakery-report
+          path: report/
+          if-no-files-found: ignore

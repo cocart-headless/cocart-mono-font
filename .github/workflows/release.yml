@@ -1,0 +1,192 @@
+name: Release
+
+# Push a tag like v1.0.0 (or v1.1.0-beta.1 for a pre-release) to publish a release.
+# The fonts are validated, the zip is built and checksummed, and the notes are taken
+# from the matching section of CHANGELOG.md.
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install fontTools
+        run: pip install -r requirements.txt
+
+      - name: Read the version from the tag
+        id: version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          VERSION="${TAG#v}"
+          if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$'; then
+            echo "::error::Tag $TAG is not a version like v1.2.3"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          case "$VERSION" in *-*) echo "prerelease=true" >> "$GITHUB_OUTPUT" ;; *) echo "prerelease=false" >> "$GITHUB_OUTPUT" ;; esac
+
+      - name: Validate the fonts
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: python scripts/check_fonts.py --version "$VERSION"
+
+      - name: Take release notes from CHANGELOG.md
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          awk -v v="$VERSION" '
+            /^## / { if (found) exit; if (index($0, "[" v "]")) { found = 1; next } }
+            found { print }
+          ' CHANGELOG.md > notes.md
+          if ! grep -q '[^[:space:]]' notes.md; then
+            echo "::error file=CHANGELOG.md::No '## [$VERSION]' section found in CHANGELOG.md"
+            exit 1
+          fi
+
+      - name: Check the release date and version
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          PRERELEASE: ${{ steps.version.outputs.prerelease }}
+        shell: python
+        run: |
+          import datetime, json, os, re, sys
+
+          version, pre = os.environ["VERSION"], os.environ["PRERELEASE"] == "true"
+          ok = True
+          head = re.search(rf"^## \[{re.escape(version)}\] - (\d{{4}}-\d{{2}}-\d{{2}})\s*$",
+                           open("CHANGELOG.md", encoding="utf-8").read(), re.M)
+          if not head:
+              print(f"::error file=CHANGELOG.md::The '## [{version}]' heading needs the release date: '## [{version}] - YYYY-MM-DD'")
+              sys.exit(1)
+          date = head.group(1)
+          today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+          if date != today:
+              print(f"::warning file=CHANGELOG.md::{version} is dated {date}, but today (UTC) is {today}")
+
+          if not pre:
+              data = json.load(open("site/mono-languages.json", encoding="utf-8"))
+              if data.get("version") != version:
+                  print(f"::error file=site/mono-languages.json::\"version\" is {data.get('version')!r}, expected {version!r}")
+                  ok = False
+              entry = next((h for h in data.get("history", []) if h.get("v") == version), None)
+              if not entry or entry.get("date") != date:
+                  got = entry.get("date") if entry else "no entry"
+                  print(f"::error file=site/mono-languages.json::\"history\" for {version} is {got}, expected {date} to match CHANGELOG.md")
+                  ok = False
+          sys.exit(0 if ok else 1)
+
+      - name: Build the zip
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: python scripts/build_release.py --version "$VERSION" --out dist
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          VERSION: ${{ steps.version.outputs.version }}
+          PRERELEASE: ${{ steps.version.outputs.prerelease }}
+        run: |
+          {
+            cat notes.md
+            echo
+            echo "### Install"
+            echo
+            echo '```sh'
+            echo "curl -fsSL https://cocart-headless.github.io/cocart-mono-font/install.sh | COCART_MONO_VERSION=$VERSION sh"
+            echo '```'
+            echo
+            echo "SHA-256 of \`CoCart-Mono-$VERSION.zip\`: \`$(cut -d' ' -f1 < "dist/CoCart-Mono-$VERSION.zip.sha256")\`"
+          } > body.md
+          flags=()
+          if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
+          gh release create "$TAG" \
+            "dist/CoCart-Mono-$VERSION.zip" \
+            "dist/CoCart-Mono-$VERSION.zip.sha256" \
+            install.sh \
+            --title "CoCart Mono $VERSION" \
+            --notes-file body.md \
+            --verify-tag "${flags[@]}"
+
+      - name: Summary
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          {
+            echo "### CoCart Mono $VERSION"
+            echo
+            echo "| File | SHA-256 |"
+            echo "|---|---|"
+            echo "| CoCart-Mono-$VERSION.zip | \`$(cut -d' ' -f1 < "dist/CoCart-Mono-$VERSION.zip.sha256")\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # Publishes @cocartheadless/mono with npm trusted publishing (OIDC): no token is stored.
+  # The package's settings on npmjs.com must list this repository and release.yml as a
+  # trusted publisher. Provenance is attached automatically. jsDelivr and unpkg serve the
+  # package from npm, so this is also what puts the fonts on the CDN.
+  npm:
+    name: Publish to npm
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # Trusted publishing needs npm 11.5.1 or newer, which Node 24 bundles.
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Build the package
+        env:
+          VERSION: ${{ needs.release.outputs.version }}
+        run: python scripts/build_npm.py --version "$VERSION" --out dist/npm
+
+      - name: Publish
+        env:
+          VERSION: ${{ needs.release.outputs.version }}
+          PRERELEASE: ${{ needs.release.outputs.prerelease }}
+        run: |
+          if [ -n "$(npm view "@cocartheadless/mono@$VERSION" version 2>/dev/null)" ]; then
+            echo "::notice::@cocartheadless/mono@$VERSION is already on npm, skipping"
+            exit 0
+          fi
+          tag=latest
+          if [ "$PRERELEASE" = "true" ]; then tag=next; fi
+          npm publish ./dist/npm --tag "$tag"
+          {
+            echo "### npm"
+            echo
+            echo "Published [@cocartheadless/mono@$VERSION](https://www.npmjs.com/package/@cocartheadless/mono/v/$VERSION) with the \`$tag\` tag."
+            echo
+            echo "CDN: https://cdn.jsdelivr.net/npm/@cocartheadless/mono@$VERSION/dist/cocart-mono.css"
+          } >> "$GITHUB_STEP_SUMMARY"

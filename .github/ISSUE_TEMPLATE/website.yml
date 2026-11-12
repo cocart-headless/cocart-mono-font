@@ -1,0 +1,36 @@
+name: Specimen site problem
+description: Something on the specimen page is broken, wrong or hard to use.
+labels: [website]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: Which section (Tester, Masked, Download…) and what happens.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Web browser
+        - iOS or Android
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Safari 26, Firefox 145…
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or console errors

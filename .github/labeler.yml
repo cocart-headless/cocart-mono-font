@@ -1,0 +1,19 @@
+fonts:
+  - changed-files:
+      - any-glob-to-any-file: "fonts/**"
+
+site:
+  - changed-files:
+      - any-glob-to-any-file: "site/**"
+
+installer:
+  - changed-files:
+      - any-glob-to-any-file: "install.sh"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [".github/**", "scripts/**", "requirements.txt"]
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file: ["*.md", "scripts/release-README.txt"]

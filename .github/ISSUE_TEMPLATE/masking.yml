@@ -1,0 +1,86 @@
+name: Key masking problem
+description: ss02 or CoCart Mono Masked missed a secret, or hid text that isn't one.
+labels: [masking]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > **Never paste a real key, token or password here.** Issues are public.
+        > Keep the prefix and the shape, then swap every character after it for a fake one of the same kind:
+        > `sk_live_51HxT7vLm3NaZ81kPq0xYzQ` → `sk_live_00AbC0dEf0GhI00jKl0mNoP`.
+        > If a fake key doesn't reproduce the problem, describe the pattern instead.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What happened?
+      options:
+        - A secret was not masked
+        - Normal text was masked
+        - Masking started or stopped in the wrong place
+        - Copying masked text lost characters
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Text that shows it (with a fake key)
+      description: 'The whole line, including what comes before the key (KEY=, "token": , Bearer, --token …).'
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: service
+    attributes:
+      label: Service or key type
+      placeholder: WooCommerce consumer secret, Stripe restricted key, GitLab PAT…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should be masked?
+      description: Which characters should show as dots, and which should stay readable?
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build
+      options:
+        - CoCart Mono with ss02 on
+        - CoCart Mono Masked
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Web browser
+    validations:
+      required: true
+
+  - type: input
+    id: app
+    attributes:
+      label: App and version
+      placeholder: iTerm2 3.6, Zed 0.210, the specimen page…
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: CoCart Mono version
+      placeholder: 1.0.0
+    validations:
+      required: true

@@ -1,0 +1,1043 @@
+<!DOCTYPE html><!--
+
+  ╭─ view-source ───────────────────────────────────────╮
+  │                                                     │
+  │    ████  ███   ████  ███  ████  █████               │
+  │   █     █   █ █     █   █ █   █   █                 │
+  │   █     █   █ █     █████ ████    █                 │
+  │   █     █   █ █     █   █ █  █    █                 │
+  │    ████  ███   ████ █   █ █   █   █                 │
+  │                                          M O N O    │
+  │                                                     │
+  │ ORDER #CC-1.0.0                          5 Nov 2026 │
+  │ ─────────────────────────────────────────────────── │
+  │ Ascender     760              ───────────────────── │
+  │ Cap height   700              ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+  │ x-height     530              · · · · · · · · · · · │
+  │ Baseline       0              ═════════════════════ │
+  │ Descender   −210              ───────────────────── │
+  │ ─────────────────────────────────────────────────── │
+  │ Weights  100               ░░░░ ▒▒▒▒ ▓▓▓▓ ████  900 │
+  │ Cell                         600 units, every glyph │
+  │ Scripts                               6 on one grid │
+  │ ═══════════════════════════════════════════════════ │
+  │ TOTAL                           $0.00 · SIL OFL 1.1 │
+  │                                                     │
+  ╰─────────────────────────────────────────── cocart ──╯
+
+  Hello, source reader.
+
+  You're reading CoCart Mono, a free monospaced typeface for
+  storefronts, carts and command lines. Every character in that
+  receipt is one of its glyphs, drawn on the same 600-unit cell.
+
+  It keeps a secret, too. With ss02 on, or in CoCart Mono Masked,
+  this line
+
+     WOO_CONSUMER_SECRET=cs_9b8a7c6d5e4f3a2b1c0d9e8f7a6b5c4d
+
+  draws as dots after the prefix. Copy it and it comes out whole.
+
+  Fonts, releases and issues:
+  https://github.com/cocart-headless/cocart-mono-font
+
+  Thanks for checking the receipt.
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoCart Mono · a free monospaced typeface</title>
+<meta name="description" content="A free monospaced typeface for storefronts, carts and command lines. Nine weights with italics, six scripts, TrueType hinting, and a feature that masks API keys on screen.">
+<link rel="canonical" href="https://cocart-headless.github.io/cocart-mono-font/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CoCart">
+<meta property="og:title" content="CoCart Mono · a free monospaced typeface">
+<meta property="og:description" content="A free monospaced typeface for storefronts, carts and command lines. Nine weights with italics, six scripts, TrueType hinting, and a feature that masks API keys on screen.">
+<meta property="og:url" content="https://cocart-headless.github.io/cocart-mono-font/">
+<meta property="og:image" content="https://cocart-headless.github.io/cocart-mono-font/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CoCart Mono: a monospaced typeface for storefronts, carts and command lines.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CoCart Mono · a free monospaced typeface">
+<meta name="twitter:description" content="A free monospaced typeface for storefronts, carts and command lines. Nine weights with italics, six scripts, TrueType hinting, and a feature that masks API keys on screen.">
+<meta name="twitter:image" content="https://cocart-headless.github.io/cocart-mono-font/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 12 38 24'%3E%3Cpath fill='%23B6A2FF' fill-rule='evenodd' d='M5 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0ZM19 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0Z'/%3E%3C/svg%3E">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#0B0A0F;color:#E4E1EA;-webkit-font-smoothing:antialiased}a{color:#B6A2FF}a:hover{color:#F7F6FA}input[type=range]{accent-color:#7B57F0}</style>
+<link rel="stylesheet" href="fonts/css/cocart-mono.css?v=1.0.0">
+<link rel="stylesheet" href="fonts/css/cocart-mono-variable.css?v=1.0.0">
+<link rel="stylesheet" href="fonts/css/cocart-mono-masked.css?v=1.0.0">
+<script src="cocart-mono.js"></script>
+<script src="cocart-mono-thai.js"></script>
+<script src="cocart-mono-hy-ka.js"></script>
+<script src="cocart-mono-braille.js"></script>
+<script src="cocart-mono-agent.js"></script>
+<script src="mask-cocart-mono.js"></script>
+</helmet>
+<div style="min-height:100vh;background:#0B0A0F;color:#E4E1EA;font-family:'Instrument Sans',system-ui,sans-serif">
+<sc-if value="{{ tocShow }}" hint-placeholder-val="{{ false }}"><nav aria-label="Sections" style="position:fixed;left:clamp(16px,1.6vw,32px);top:50%;transform:translateY(-50%);z-index:15;display:flex;flex-direction:column;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase">
+<sc-for list="{{ toc }}" as="t" hint-placeholder-count="13"><a href="#{{ t.id }}" onClick="{{ t.go }}" style="display:flex;gap:10px;align-items:center;min-height:28px;color:{{ t.co }};text-decoration:none;transition:color .15s" style-hover="color:#B6A2FF"><span style="flex:none;width:{{ t.bar }};height:1px;background:currentColor;transition:width .2s"></span><span>{{ t.n }}</span><sc-if value="{{ tocWide }}" hint-placeholder-val="{{ false }}"><span style="white-space:nowrap">{{ t.name }}</span></sc-if></a></sc-for>
+</nav></sc-if>
+<sc-if value="{{ tocPill }}" hint-placeholder-val="{{ false }}"><div style="position:fixed;left:clamp(12px,2vw,24px);bottom:clamp(12px,2vw,24px);z-index:20;display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-family:'CoCart Mono',monospace">
+<sc-if value="{{ tocOpen }}" hint-placeholder-val="{{ false }}"><nav aria-label="Sections" style="display:flex;flex-direction:column;padding:6px;min-width:220px;max-height:min(70vh,520px);overflow-y:auto;background:#15131B;border:1px solid #2E2A36;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.4);font-size:13px;letter-spacing:.04em;text-transform:uppercase">
+<sc-for list="{{ toc }}" as="t" hint-placeholder-count="13"><a href="#{{ t.id }}" onClick="{{ t.go }}" style="display:flex;gap:12px;align-items:center;min-height:36px;padding:0 10px;border-radius:8px;background:{{ t.bg }};color:{{ t.co }};text-decoration:none" style-hover="color:#B6A2FF"><span style="color:#B6A2FF">{{ t.n }}</span><span>{{ t.name }}</span></a></sc-for>
+</nav></sc-if>
+<button onClick="{{ toggleToc }}" aria-expanded="{{ tocOpen }}" style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;border:1px solid #3A3546;background:#15131B;color:#F7F6FA;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.4)" style-hover="border-color:#7B57F0"><span style="color:#B6A2FF">☰</span><span>{{ tocActLabel.n }}</span><span>{{ tocActLabel.name }}</span></button>
+</div></sc-if>
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px)">
+
+<header data-screen-label="Header" style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#A9A3B5">
+<a href="https://cocartheadless.com" aria-label="CoCart" style="display:inline-flex;text-decoration:none"><span style="display:inline-flex;align-items:center;gap:8px;font:600 20px/1 'Figtree',sans-serif;letter-spacing:-.01em;text-transform:none;color:#FFFFFF"><svg viewBox="5 12 38 24" style="height:21px;width:auto;display:block;flex:none;color:#FFFFFF" aria-hidden="true"><path d="M5 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0ZM19 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0Z" fill="currentColor" fill-rule="evenodd"></path></svg><span>CoCa<span style="margin-right:.035em">r</span>t</span></span></a>
+<span>Specimen 01 · CoCart Mono 1.0.0 · Nine weights + italics · Six scripts · Hinted · Masked</span>
+<span style="display:flex;align-items:center;gap:20px"><a href="languages.html" style="color:#A9A3B5;text-decoration:none" style-hover="color:#F7F6FA">Languages</a><a href="#download" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;background:#7B57F0;color:#FFFFFF;text-decoration:none" style-hover="background:#8E6DF5">Download ↓</a></span>
+</header>
+
+<section data-screen-label="Hero" style="padding:clamp(48px,8vw,104px) 0 clamp(40px,6vw,72px);display:flex;flex-direction:column;gap:clamp(32px,5vw,56px)">
+<cc-mono text="CoCart Mono" fit="1" color="#F7F6FA"></cc-mono>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px 64px;align-items:start">
+<p style="margin:0;font-size:clamp(18px,1.8vw,22px);line-height:1.5;color:#E4E1EA;text-wrap:pretty;max-width:36em">A monospaced typeface for storefronts, carts and command lines.</p>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5">
+<span>Cell</span><span style="color:#F7F6FA">600 / 1000 em</span>
+<span>x-height</span><span style="color:#F7F6FA">530 — tall for small sizes</span>
+<span>Glyphs</span><span style="color:#F7F6FA">{{ glyphCount }} drawn</span>
+<span>Scripts</span><span style="color:#F7F6FA">Latin, Cyrillic, Greek, Thai, Armenian, Georgian</span>
+<span>Weights</span><span style="color:#F7F6FA">Thin 100 to Black 900 + italics</span>
+<span>Features</span><span style="color:#F7F6FA">ss01 dotted zero · ss02 key masking</span>
+<span>Version</span><span style="color:#F7F6FA">1.0.0 · SIL Open Font License</span>
+</div>
+</div>
+</section>
+
+<section data-screen-label="About" style="padding:0 0 clamp(48px,7vw,88px);display:flex;flex-direction:column;gap:24px">
+<div style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">About</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px 40px">
+<div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B6A2FF">For stores</span><span style="font-size:20px;font-weight:500;color:#F7F6FA">Numbers you can trust at a glance</span><p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Slashed zero, serifed i, l and 1, and open apertures keep codes unambiguous. Tabular figures line totals up in carts, receipts and invoices, and every currency sign up to ₿ is drawn.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B6A2FF">For developers</span><span style="font-size:20px;font-weight:500;color:#F7F6FA">A font that does more than draw</span><p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Turn on ss02, or install CoCart Mono Masked, and API keys show as dots on screen shares and recordings while the text stays intact. Box drawing, blocks, Braille and agent marks are drawn on the same grid, so terminals and CLIs never fall back to another font.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B6A2FF">One skeleton</span><span style="font-size:20px;font-weight:500;color:#F7F6FA">Nine weights, one drawing</span><p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Every glyph is drawn as a single centre line and weighted last, so Thin and Black share exactly the same skeleton. Figures, codes and grids never shift between weights, and the in-between weights of the variable font are exact, not guessed.</p></div>
+</div>
+</section>
+
+<section data-screen-label="01 Principles" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">01</span><span>Principles</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px">
+<h3 style="margin:0;font-size:24px;font-weight:500;color:#F7F6FA">Precision</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">One cell for every glyph, so a narrow 1 takes the same space as a wide 8. Prices stack on the decimal point with no tabular settings.</p>
+<div style="margin-top:auto;background:#0B0A0F;border-radius:10px;padding:20px;display:flex;justify-content:flex-end">
+<cc-mono text="$11.11\n$88.88\n$1,249.00" align="right" size="28" color="#F7F6FA"></cc-mono>
+</div>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px">
+<h3 style="margin:0;font-size:24px;font-weight:500;color:#F7F6FA">Clarity</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">The look-alikes that cause misread codes are drawn apart: 0 and O, 1, l and I, 5 and S, 8 and B. A coupon or SKU reads right the first time.</p>
+<div style="margin-top:auto;background:#0B0A0F;border-radius:10px;padding:20px">
+<cc-mono text="0O 1lI 5S 8B" size="28" color="#F7F6FA"></cc-mono>
+</div>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px">
+<h3 style="margin:0;font-size:24px;font-weight:500;color:#F7F6FA">Function</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Currency signs, percent, hash, multiply and arrows were drawn first, not last. They are the symbols a storefront uses on every page.</p>
+<div style="margin-top:auto;background:#0B0A0F;border-radius:10px;padding:20px">
+<cc-mono text="$€£¥¢ %#×→" size="28" color="#F7F6FA"></cc-mono>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="02 Construction" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">02</span><span>Construction &amp; character set</span></div>
+<div ref="{{ inspRef }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;align-items:start">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;display:flex;flex-direction:column;position:{{ inspPos }};top:16px;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 20px;border-bottom:1px solid #24212C">
+<div style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:17px;font-weight:500;color:#F7F6FA">{{ selTitle }}</span><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">{{ selWeightName }} · wght {{ selWght }} · stroke {{ selStroke }}u</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-family:'CoCart Mono',monospace;font-size:13px"><span style="color:#B6A2FF">{{ selTag }}</span><span style="color:#A9A3B5">{{ selSub }}</span></div>
+</div>
+<div style="padding:20px 20px 4px;max-width:420px;width:100%;margin:0 auto;box-sizing:border-box">
+<cc-mono text="{{ sel }}" fit="1" size="560" guides="1" ref="1" weight="{{ selStroke }}" italic="{{ selItalicDraw }}" zero="{{ selZero }}" color="#E4E1EA"></cc-mono>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:0 20px 14px;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5"><span>←</span><span>600 units · 0.6 em</span><span>→</span></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;padding:14px 20px;border-top:1px solid #24212C">
+<label style="flex:1 1 200px;display:flex;align-items:center;gap:12px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Weight <input type="range" min="100" max="900" step="1" value="{{ selWght }}" onInput="{{ onSelWght }}" style="flex:1;min-width:0"> <span style="color:#F7F6FA;min-width:3ch;text-align:right">{{ selWght }}</span></label>
+<button onClick="{{ toggleSelItalic }}" style="background:#0B0A0F;color:#F7F6FA;border:1px solid #2E2A36;border-radius:8px;padding:8px 12px;font-family:'CoCart Mono',monospace;font-size:13px;cursor:pointer;background:{{ selItalicBg }};font-style:italic" style-hover="border-color:#7B57F0">Italic</button>
+<button onClick="{{ copySel }}" style="background:#0B0A0F;color:#F7F6FA;border:1px solid #2E2A36;border-radius:8px;padding:8px 12px;font-family:'CoCart Mono',monospace;font-size:13px;cursor:pointer" style-hover="border-color:#7B57F0">{{ copyLabel }}</button>
+</div>
+<p style="margin:0;padding:14px 20px 18px;border-top:1px solid #24212C;font-size:13px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">One monoline skeleton per glyph: squares are on-curve points, dots are handles, with a 0.58 handle ratio to match the CoCart wordmark. Weight is applied last, so all nine weights come from the same drawing. Drag the slider to watch it thicken.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+<div role="tablist" style="display:flex;flex-wrap:wrap;gap:4px 32px;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace">
+<button role="tab" onClick="{{ modeChars.pick }}" style="display:flex;align-items:baseline;gap:10px;background:none;border:0;border-bottom:2px solid {{ modeChars.bd }};margin-bottom:-1px;padding:6px 0 12px;color:{{ modeChars.co }};font:inherit;cursor:pointer" style-hover="color:#F7F6FA"><span style="font-size:14px;color:#B6A2FF">Ag</span><span style="font-size:22px;font-weight:500">Characters</span><span style="font-size:13px;color:#6B6578">{{ charTotal }}</span></button>
+<button role="tab" onClick="{{ modeAlts.pick }}" style="display:flex;align-items:baseline;gap:10px;background:none;border:0;border-bottom:2px solid {{ modeAlts.bd }};margin-bottom:-1px;padding:6px 0 12px;color:{{ modeAlts.co }};font:inherit;cursor:pointer" style-hover="color:#F7F6FA"><span style="font-size:14px;color:#B6A2FF">0<span style="color:#6B6578">→</span><span style="font-feature-settings:'zero' 1">0</span></span><span style="font-size:22px;font-weight:500">Alternates</span><span style="font-size:13px;color:#6B6578">{{ altTotal }}</span></button>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:2px 18px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="12">
+<button onClick="{{ t.pick }}" style="background:none;border:0;border-bottom:2px solid {{ t.bd }};margin-bottom:-1px;padding:8px 0;color:{{ t.co }};font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:flex;gap:6px" style-hover="color:#F7F6FA">{{ t.name }}<span style="color:#6B6578">{{ t.n }}</span></button>
+</sc-for>
+</div>
+<sc-if value="{{ isChars }}" hint-placeholder-val="{{ true }}"><label style="display:flex;align-items:center;gap:12px;background:#15131B;border:1px solid #2E2A36;border-radius:10px;padding:12px 14px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Find <input value="{{ findQ }}" onInput="{{ onFind }}" spellcheck="false" placeholder="a block name, U+20B9, or paste a character" style="flex:1;min-width:0;background:none;border:0;outline:none;color:#F7F6FA;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:0;text-transform:none"></label></sc-if>
+<div style="display:flex;justify-content:space-between;gap:12px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase"><span style="color:#B6A2FF">{{ gridTitle }}</span><span style="color:#A9A3B5">{{ gridCount }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:1px;background:#24212C;border:1px solid #24212C;border-radius:10px;overflow:hidden">
+<sc-for list="{{ gridItems }}" as="g" hint-placeholder-count="48">
+<button onClick="{{ g.pick }}" title="{{ g.code }}" style="aspect-ratio:1;display:grid;place-items:center;background:{{ g.bg }};color:{{ g.co }};border:0;padding:0;cursor:pointer;font-family:'CoCart Mono VF',monospace;font-size:22px;font-weight:{{ selWght }};font-style:{{ g.fs }};font-feature-settings:{{ g.ff }}" style-hover="outline:1px solid #7B57F0;outline-offset:-1px">{{ g.ch }}</button>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="03 Legibility" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">03</span><span>Legibility · the look-alikes</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:#24212C;border:1px solid #24212C;border-radius:16px;overflow:hidden">
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="0Oo" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">Zero is slashed and narrower than O. Lowercase o sits lower and rounder.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="1lIi|" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">1 has a flag, l a curved tail, I serifs top and bottom, i a slab foot. The bar stays plain.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="5Ss$" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">5 turns a hard corner where S and s curve. $ has short ticks above and below, not a bar through it.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="8B3" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">3 has a flat top. 8 stacks a small bowl on a larger one, so it never reads as B.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="rn m" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">The foot serif on r keeps rn from merging into m.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="2Zz" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">2 starts with a curve. Z and z are all straight lines.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="6b9gq" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">6 and 9 use straight strokes, not stems, so they never echo b, g or q.</span></div>
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><cc-mono text="-−–—" size="64" color="#F7F6FA"></cc-mono><span style="font-size:14px;line-height:1.5;color:#A9A3B5">Hyphen, minus, en dash and em dash each have their own length.</span></div>
+</div>
+</section>
+
+<section data-screen-label="04 Scripts" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">04</span><span>Six scripts, one grid</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<cc-mono text="Cart · Корзина" fit="1" color="#F7F6FA"></cc-mono>
+<cc-mono text="ตะกร้า · ฿1,290" fit="1" color="#F7F6FA"></cc-mono>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px">
+<p style="margin:0;font-size:17px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">Cyrillic reuses the Latin skeletons wherever the letters match — А В Е К М Н О Р С Т Х — and the new forms are drawn to the same 600-unit cell. A Russian price list lines up with an English one, character for character.</p>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Lowercase Cyrillic is drawn on its own at the 530 x-height — д and ц drop into the descender, л gets a curved leg — so it reads as a text face, not small capitals. Accents are separate parts placed by rule, so one fix to an acute updates every letter that uses it.</p>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #24212C">
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">English</span><div style="overflow:hidden"><cc-mono text="Free shipping on orders over $50" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Deutsch</span><div style="overflow:hidden"><cc-mono text="Größe wählen · Versandkostenfrei ab 50 €" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Français</span><div style="overflow:hidden"><cc-mono text="Ajouter au panier · Livraison offerte dès 50 €" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Español</span><div style="overflow:hidden"><cc-mono text="Añadir a la cesta · Envío gratis" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Polski</span><div style="overflow:hidden"><cc-mono text="Dodaj do koszyka · Darmowa dostawa · 49,00 zł" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Čeština</span><div style="overflow:hidden"><cc-mono text="Přidat do košíku · Doprava zdarma" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Română</span><div style="overflow:hidden"><cc-mono text="Adaugă în coș · Livrare gratuită" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Türkçe</span><div style="overflow:hidden"><cc-mono text="Sepete ekle · Ücretsiz kargo · İndirim %30" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Latviešu</span><div style="overflow:hidden"><cc-mono text="Pievienot grozam · Bezmaksas piegāde" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Íslenska</span><div style="overflow:hidden"><cc-mono text="Setja í körfu · Frí heimsending · Þökk" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Русский</span><div style="overflow:hidden"><cc-mono text="В корзину · Бесплатная доставка от 3 000 ₽" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Українська</span><div style="overflow:hidden"><cc-mono text="Додати в кошик · Знижка 30% · 1 500 ₴" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Беларуская</span><div style="overflow:hidden"><cc-mono text="Дадаць у кошык · Бясплатная дастаўка" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Српски</span><div style="overflow:hidden"><cc-mono text="Додај у корпу · Плаћање картицом" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Български</span><div style="overflow:hidden"><cc-mono text="Безплатна доставка · Поръчай сега" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Македонски</span><div style="overflow:hidden"><cc-mono text="Додади во кошничка · Ќе стигне утре" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Қазақша</span><div style="overflow:hidden"><cc-mono text="Себетке қосу · Тегін жеткізу · 4 990 ₸" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Ελληνικά</span><div style="overflow:hidden"><cc-mono text="Προσθήκη στο καλάθι · Δωρεάν αποστολή" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Tiếng Việt</span><div style="overflow:hidden"><cc-mono text="Thêm vào giỏ hàng · Giảm 30% · 499.000 ₫" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">ไทย</span><div style="overflow:hidden"><cc-mono text="หยิบใส่ตะกร้า · ส่งฟรี · ลด 30% · ฿1,290" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">ไทย · marks</span><div style="overflow:hidden"><cc-mono text="ที่ ปี่ ฟื้น น้ำ สั่งซื้อ ญุ ฐู ฎุ" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Հայերեն</span><div style="overflow:hidden"><cc-mono text="Ավելացնել զամբյուղ · Անվճար առաքում · 9 900 ֏" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">ქართული</span><div style="overflow:hidden"><cc-mono text="კალათაში დამატება · უფასო მიწოდება · 49 ₾" size="22" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Mtavruli</span><div style="overflow:hidden"><cc-mono text="ᲙᲐᲚᲐᲗᲐ · ᲤᲐᲡᲓᲐᲙᲚᲔᲑᲐ 30%" size="22" color="#F7F6FA"></cc-mono></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Latin coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">English, French, German, Spanish, Portuguese, Italian, Dutch, Danish, Norwegian, Swedish, Finnish, Polish, Czech, Slovak, Hungarian, Romanian, Turkish, Croatian, Slovenian, Lithuanian, Latvian, Estonian, Icelandic, Vietnamese</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Greek coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">Modern monotonic Greek — full alphabet, final sigma, tonos and dialytika. Shared capitals reuse the Latin drawings.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Cyrillic coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">Russian, Ukrainian, Belarusian, Bulgarian, Serbian, Macedonian, Kazakh — plus ₽, ₴ and ₸ in the commerce set.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Thai coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">All 87 characters from ก to ๛, drawn for Mono rather than adapted. Loops are part of the same single line, tone marks climb above upper vowels, and marks step left of the tall ป ฝ ฟ ฬ.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Armenian coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">Eastern and Western Armenian — 38 capitals, 39 lowercase including the և ligature, Armenian punctuation and the dram sign ֏.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Georgian coverage</span><span style="font-size:15px;line-height:1.6;color:#E4E1EA;text-wrap:pretty">Modern Mkhedruli with archaic letters, and Mtavruli capitals drawn from the same skeletons — plus ₾ in the commerce set.</span></div>
+</div>
+</section>
+
+<section data-screen-label="05 Italic" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">05</span><span>Italic — a true second voice</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px">
+<p style="margin:0;font-size:17px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">The italic leans 9° and swaps in cursive forms where readers expect them. In Latin that's a single-storey a and a descending f. In Cyrillic the change is bigger: и becomes u, п becomes n, т becomes m, г turns into a reversed s and д gets a looped ascender.</p>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Use it for sale notes, product variants and secondary details — the line a shopper reads after the price, not instead of it.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1px;background:#24212C;border:1px solid #24212C;border-radius:16px;overflow:hidden">
+<div style="background:#0B0A0F;padding:28px;display:flex;flex-direction:column;gap:16px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Upright</span><cc-mono text="бвгдитпцш af" fit="1" color="#F7F6FA"></cc-mono></div>
+<div style="background:#15131B;padding:28px;display:flex;flex-direction:column;gap:16px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#B6A2FF">Italic</span><cc-mono text="бвгдитпцш af" fit="1" italic="1" color="#B6A2FF"></cc-mono></div>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #24212C">
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">English</span><div style="overflow:hidden"><cc-mono text="Last few left — only 3 in stock" size="24" italic="1" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Русский</span><div style="overflow:hidden"><cc-mono text="Осталось только 3 штуки — успейте купить" size="24" italic="1" color="#F7F6FA"></cc-mono></div></div>
+<div style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C"><span style="font-size:14px;color:#A9A3B5">Српски</span><div style="overflow:hidden"><cc-mono text="Попуст важи до петка · Цена по комаду" size="24" italic="1" color="#F7F6FA"></cc-mono></div></div>
+</div>
+</section>
+
+<section data-screen-label="06 Weights" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">06</span><span>Family — nine weights, one skeleton</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px">
+<p style="margin:0;font-size:17px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">Thin 100 to Black 900, each with an italic. Every weight is drawn from the same centre lines with a thicker pen, from 20 units to 124, so the grid never moves: a Black total sits directly over a Thin line item, and every style keeps the 0.600 em cell. Wide letters (m, w, ж, ш, щ) carry a lighter stroke at every weight, so they stay open at Black.</p>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Thin and ExtraLight for display prices at 40px and up, Light for large prices, Regular for body and line items, Medium and SemiBold for buttons and labels, Bold for totals, ExtraBold and Black for sale badges and hero numbers.</p>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding-bottom:14px">
+<div style="display:flex;align-items:center;gap:12px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Size<div style="display:flex;border:1px solid #2E2A36;border-radius:8px;overflow:hidden">
+<sc-for list="{{ famSizes }}" as="s" hint-placeholder-count="4"><button onClick="{{ s.pick }}" style="background:{{ s.bg }};color:{{ s.co }};border:0;border-left:1px solid #2E2A36;margin-left:-1px;padding:7px 12px;font-family:'CoCart Mono',monospace;font-size:13px;cursor:pointer">{{ s.label }}</button></sc-for>
+</div></div>
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Same advance in every style: 0.600 em</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(96px,150px) minmax(0,1fr) minmax(0,1fr);gap:24px;padding:10px 0;border-top:1px solid #24212C;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#6B6578"><span>wght</span><span>Roman</span><span>Italic</span></div>
+<sc-for list="{{ famRows }}" as="r" hint-placeholder-count="9">
+<div style="display:grid;grid-template-columns:minmax(96px,150px) minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid #24212C">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="display:flex;gap:10px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase"><span style="color:#6B6578">{{ r.w }}</span><span style="color:#F7F6FA">{{ r.name }}</span></span><span style="display:block;height:3px;background:#24212C;border-radius:2px;overflow:hidden"><span style="display:block;height:100%;width:{{ r.pct }};background:#7B57F0"></span></span></div>
+<div style="container-type:inline-size;overflow:hidden;white-space:nowrap;line-height:1.2"><span style="font-family:'CoCart Mono',monospace;font-weight:{{ r.w }};font-size:{{ famFont }};color:#F7F6FA">{{ famText }}</span></div>
+<div style="container-type:inline-size;overflow:hidden;white-space:nowrap;line-height:1.2"><span style="font-family:'CoCart Mono',monospace;font-weight:{{ r.w }};font-style:italic;font-size:{{ famFont }};color:#F7F6FA">{{ famText }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+<div style="background:#F7F6FA;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#6B6578">Weights working together</span>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><cc-mono text="Подытог" size="18" weight="64" color="#4A4556"></cc-mono><cc-mono text="  4 990 ₽" size="18" weight="64" color="#0B0A0F"></cc-mono></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><cc-mono text="Доставка" size="18" weight="64" color="#4A4556"></cc-mono><cc-mono text="    350 ₽" size="18" weight="64" color="#0B0A0F"></cc-mono></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #CFCADA;padding-top:14px"><cc-mono text="Итого" size="22" weight="100" color="#0B0A0F"></cc-mono><cc-mono text="5 340 ₽" size="22" weight="100" color="#0B0A0F"></cc-mono></div>
+</div>
+<div style="background:#5B3BD1;border-radius:16px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+<cc-mono text="SALE −30%" size="40" weight="100" color="#FFFFFF"></cc-mono>
+<cc-mono text="Ends Sunday 23:59" size="18" weight="44" color="#FFFFFF"></cc-mono>
+</div>
+</div>
+</section>
+
+<section data-screen-label="07 In the store" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">07</span><span>In the store</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:stretch">
+
+<div style="background:#F7F6FA;color:#0B0A0F;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px">
+<div style="font-size:13px;font-family:'CoCart Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6B6578">Product</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:22px;font-weight:500">Linen Throw — Oat</span>
+<span style="font-size:14px;color:#4A4556">Stonewashed Belgian linen, 130 × 170 cm</span>
+</div>
+<div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<cc-mono text="$148.00" size="56" color="#0B0A0F"></cc-mono>
+<span style="display:flex;align-items:center;gap:8px;padding-bottom:6px"><cc-mono text="$185.00" size="18" color="#6B6578"></cc-mono><span style="background:#5B3BD1;color:#FFFFFF;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:600">Save 20%</span></span>
+</div>
+<div style="margin-top:auto;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;align-items:center;border-top:1px solid #E4E1EA;padding-top:18px;font-size:13px;color:#4A4556">
+<span>SKU</span><cc-mono text="LT-0418-OAT" size="16" color="#0B0A0F"></cc-mono>
+<span>In stock</span><cc-mono text="12" size="16" color="#0B0A0F"></cc-mono>
+</div>
+</div>
+
+<div style="background:#F7F6FA;color:#0B0A0F;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<div style="font-size:13px;font-family:'CoCart Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6B6578">Order summary</div>
+<div style="display:flex;flex-direction:column;gap:14px;font-size:15px;color:#4A4556">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px"><span>Subtotal</span><cc-mono text=" $1,249.00" size="18" color="#0B0A0F"></cc-mono></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px"><span>Shipping</span><cc-mono text="    $12.50" size="18" color="#0B0A0F"></cc-mono></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px"><span style="display:flex;gap:8px;align-items:center">Discount <cc-mono text="SAVE30" size="13" color="#5B3BD1"></cc-mono></span><cc-mono text="  −$374.70" size="18" color="#2F7A3E"></cc-mono></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px"><span>Tax</span><cc-mono text="    $88.68" size="18" color="#0B0A0F"></cc-mono></div>
+</div>
+<div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #CFCADA;padding-top:18px">
+<span style="font-size:17px;font-weight:600">Total</span><cc-mono text="   $975.48" size="26" color="#0B0A0F"></cc-mono>
+</div>
+</div>
+
+<div style="background:#F7F6FA;color:#0B0A0F;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<div style="font-size:13px;font-family:'CoCart Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6B6578">Confirmation</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:14px;color:#4A4556">Order</span>
+<cc-mono text="#CC-20491" size="36" color="#0B0A0F"></cc-mono>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:14px;color:#4A4556">Gift card — read it back over the phone</span>
+<cc-mono text="4F7Q-0OIL-8B5S" size="24" color="#5B3BD1"></cc-mono>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:auto">
+<span style="font-size:14px;color:#4A4556">Tracking</span>
+<cc-mono text="1Z 999 AA1 01 2345 6784" size="16" color="#0B0A0F"></cc-mono>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="08 Plates" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">08</span><span>Plates — made of nothing but its characters</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:stretch">
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div style="flex:1;background:#5B3BD1;color:#F7F6FA;border-radius:16px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:2px solid currentColor;font-family:'CoCart Mono',monospace;font-size:13px"><span>CoCart Mono</span><span>( Pl. 01 )</span><span>Nine weights</span></div>
+<div style="container-type:inline-size;display:flex;flex-direction:column">
+<sc-for list="{{ waterfall }}" as="wf" hint-placeholder-count="9">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font-family:'CoCart Mono',monospace;font-weight:{{ wf.w }};font-size:calc((100cqw - 36px) / 6.6);line-height:1.04;white-space:nowrap">CoCart Mono</span><span style="font-family:'CoCart Mono',monospace;font-size:13px;color:#E4DEFF">{{ wf.w }}</span></div>
+</sc-for>
+</div>
+<div style="margin-top:auto;display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:2px solid currentColor;font-family:'CoCart Mono',monospace;font-size:13px"><span>100 → 900</span><span>One skeleton</span><span>Cell 0.600 em</span></div>
+</div>
+<figcaption style="display:flex;gap:12px;font-size:13px;line-height:1.5;color:#A9A3B5"><span style="font-family:'CoCart Mono',monospace;color:#B6A2FF">01</span><span><span style="color:#F7F6FA;font-weight:500">Waterfall</span> · The name in all nine weights, Thin to Black.</span></figcaption>
+</figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div style="flex:1;background:#F7F6FA;color:#0B0A0F;border-radius:16px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:2px solid currentColor;font-family:'CoCart Mono',monospace;font-size:13px"><span>Receipt</span><span>( Pl. 02 )</span><span>30 columns</span></div>
+<div style="container-type:inline-size"><div style="font-family:'CoCart Mono',monospace;font-size:calc(100cqw / 18);line-height:1.2">
+<div style="white-space:pre;font-weight:800">        COCART COFFEE</div>
+<div style="white-space:pre;font-weight:300">   14 Market St · Portland</div>
+<div style="white-space:pre;font-weight:300">──────────────────────────────</div>
+<div style="white-space:pre;font-weight:600">ORDER #CC-20491      TUE 14:02</div>
+<div style="white-space:pre;font-weight:300">──────────────────────────────</div>
+<div style="white-space:pre;font-weight:400">2 × Oat flat white       $9.00</div>
+<div style="white-space:pre;font-weight:400">1 × Cardamom bun         $4.25</div>
+<div style="white-space:pre;font-weight:400">1 × Beans, Ethiopia     $18.50</div>
+<div style="white-space:pre;font-weight:300">    250 g · light roast</div>
+<div style="white-space:pre;font-weight:300">──────────────────────────────</div>
+<div style="white-space:pre;font-weight:400">Subtotal                $31.75</div>
+<div style="white-space:pre;font-weight:400">Discount SAVE30         −$9.53</div>
+<div style="white-space:pre;font-weight:400">Tax 8.25%                $1.83</div>
+<div style="white-space:pre;font-weight:400">══════════════════════════════</div>
+<div style="white-space:pre;font-weight:900">TOTAL                   $24.05</div>
+<div style="white-space:pre;font-weight:400">══════════════════════════════</div>
+<div style="white-space:pre;font-weight:500">VISA ···· 4242        APPROVED</div>
+<div style="white-space:pre;font-weight:400;line-height:1">▋ ▎▌ ▎▊ █▎   ▎ ▍▏  ▏ █▏  ▋▏▉ ▋</div>
+<div style="white-space:pre;font-weight:400;line-height:1">▋ ▎▌ ▎▊ █▎   ▎ ▍▏  ▏ █▏  ▋▏▉ ▋</div>
+<div style="white-space:pre;font-weight:300">      CC 20491 0004 2026</div>
+</div></div>
+<div style="margin-top:auto;display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:2px solid currentColor;font-family:'CoCart Mono',monospace;font-size:13px"><span>Box drawing</span><span>Block barcode</span><span>Six weights</span></div>
+</div>
+<figcaption style="display:flex;gap:12px;font-size:13px;line-height:1.5;color:#A9A3B5"><span style="font-family:'CoCart Mono',monospace;color:#B6A2FF">02</span><span><span style="color:#F7F6FA;font-weight:500">Receipt</span> · A till slip — rules, totals and barcode — set entirely in type.</span></figcaption>
+</figure>
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div style="flex:1;background:#15131B;border:1px solid #24212C;color:#E4E1EA;border-radius:16px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:2px solid currentColor;font-family:'CoCart Mono',monospace;font-size:13px"><span>Pick path</span><span>( Pl. 03 )</span><span>┃ ━ ┏ ┛ ▒</span></div>
+<div style="container-type:inline-size;flex:1;display:flex;flex-direction:column;gap:20px">{{ pickPlate }}</div>
+</div>
+<figcaption style="display:flex;gap:12px;font-size:13px;line-height:1.5;color:#A9A3B5"><span style="font-family:'CoCart Mono',monospace;color:#B6A2FF">03</span><span><span style="color:#F7F6FA;font-weight:500">Pick path</span> · A warehouse floor in box drawing; the picker’s route is found and drawn live.</span></figcaption>
+</figure>
+</div>
+</section>
+
+<section id="masked" data-screen-label="09 Masked" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">09</span><span>Keeps a secret</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px">
+<p style="margin:0;font-size:17px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">CoCart Mono can draw API keys as dots. Paste a WooCommerce consumer secret during a screen share and the call sees <span style="font-family:'CoCart Mono',monospace;font-feature-settings:'ss02' 1;color:#F7F6FA">cs_9b8a7c6d5e4f</span>, while the clipboard, the file and your shell history keep every character. The font does it on its own: no plugin, nothing for the app to know.</p>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Turn on <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ss02</span> in CoCart Mono, or install CoCart Mono Masked, where it's always on for apps with no font settings. The first four characters after a prefix stay readable so you can tell keys apart. Keep both off the storefront: they hide text from shoppers too.</p>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;overflow:hidden">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding:14px clamp(16px,2.4vw,24px);border-bottom:1px solid #24212C">
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">zsh · ~/shop · CoCart Mono · ss02</span>
+<button onPointerDown="{{ reveal }}" onPointerUp="{{ conceal }}" onPointerLeave="{{ conceal }}" onKeyDown="{{ revealKey }}" onKeyUp="{{ conceal }}" style="background:{{ revealBg }};color:#F7F6FA;border:1px solid #2E2A36;border-radius:8px;padding:8px 14px;font-family:'CoCart Mono',monospace;font-size:13px;cursor:pointer;user-select:none;touch-action:none" style-hover="border-color:#7B57F0">{{ revealLabel }}</button>
+</div>
+<div style="padding:clamp(16px,2.4vw,28px);overflow-x:auto;font-family:'CoCart Mono',monospace;font-feature-settings:{{ maskFeat }};font-size:clamp(13px,1.35vw,16px);line-height:1.75;color:#E4E1EA">
+<div style="white-space:pre"><span style="color:#B6A2FF">$</span> cat .env</div>
+<div style="white-space:pre">WOO_CONSUMER_KEY=ck_4f9a2b7c1d3e5f60718293a4b5c6d7e8f9a0b1c2</div>
+<div style="white-space:pre">WOO_CONSUMER_SECRET=cs_9b8a7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b</div>
+<div style="white-space:pre">STRIPE_SECRET_KEY=sk_live_51HxT7vLm3NaZ81kPq0xYzQ</div>
+<div style="white-space:pre">STRIPE_PUBLISHABLE_KEY=pk_live_51HxT7vLm3NaZ81kPq0xYzQ</div>
+<div style="white-space:pre"><span style="color:#B6A2FF">$</span> curl https://shop.test/wp-json/cocart/v2/cart \</div>
+<div style="white-space:pre">    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQyfQ.Hk3mPq9X"</div>
+<div style="white-space:pre">{"cart_key":"t_8c41a2","items_count":3,"total":"975.48"}</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;padding:clamp(16px,2.4vw,24px);border-top:1px solid #24212C">
+<label for="mask-input" style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Paste a key · it stays in the field, only the drawing changes</label>
+<input id="mask-input" value="{{ maskText }}" onInput="{{ onMaskText }}" spellcheck="false" autocomplete="off" style="width:100%;box-sizing:border-box;background:#0B0A0F;border:1px solid #2E2A36;border-radius:10px;padding:14px 16px;color:#F7F6FA;font-family:'CoCart Mono',monospace;font-feature-settings:{{ maskFeat }};font-size:16px;outline:none" style-focus="border-color:#7B57F0">
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Hidden</span>
+<div style="display:flex;flex-direction:column;gap:6px;font-family:'CoCart Mono',monospace;font-feature-settings:'ss02' 1;font-size:15px;color:#F7F6FA;overflow-x:auto">
+<div style="white-space:pre">ck_4f9a2b7c1d3e5f6071</div><div style="white-space:pre">consumer_secret=cs_9b8a7c6d</div><div style="white-space:pre">sk_live_51HxT7vLm3NaZ8</div><div style="white-space:pre">"api_key": "Xk29fLp0qRs7"</div><div style="white-space:pre">PASSWORD=hX9k2pLmQ7</div>
+</div>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Left alone</span>
+<div style="display:flex;flex-direction:column;gap:6px;font-family:'CoCart Mono',monospace;font-feature-settings:'ss02' 1;font-size:15px;color:#F7F6FA;overflow-x:auto">
+<div style="white-space:pre">stock_status=instock</div><div style="white-space:pre">pk_live_51HxT7vLm3NaZ8</div><div style="white-space:pre">token: string;</div><div style="white-space:pre">Order #CC-20491 · $975.48</div><div style="white-space:pre">SKU LT-0418-OAT · SAVE30</div>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">What it recognizes · {{ maskSummary }}</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:20px 24px">
+<sc-for list="{{ maskGroups }}" as="grp" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:6px;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase"><span style="color:#B6A2FF">{{ grp.cat }}</span><span style="color:#A9A3B5">{{ grp.n }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="4">
+<span title="{{ it.list }}" style="display:flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid #2E2A36;border-radius:999px;font-size:13px;color:#E4E1EA">{{ it.name }}<span style="font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5">{{ it.n }}</span></span>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;font-size:14px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Contexts are the words around a secret, in any case, including wp-config salts: <span style="font-family:'CoCart Mono',monospace;color:#E4E1EA">consumer_secret=</span>, <span style="font-family:'CoCart Mono',monospace;color:#E4E1EA">"api_key": "</span>, <span style="font-family:'CoCart Mono',monospace;color:#E4E1EA">Bearer </span>, <span style="font-family:'CoCart Mono',monospace;color:#E4E1EA">--token </span>. A mask never starts inside a word, public keys stay readable, and a mask ends at the first character a key can't contain. It changes pixels, not text: copy, files, logs and other programs still see the key, and a key that wraps onto a second line shows. If a key has been seen, rotate it.</p>
+</div>
+</div>
+</section>
+
+<section data-screen-label="10 Tester" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">10</span><span>Try it</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+<input value="{{ testerText }}" onInput="{{ onText }}" style="flex:1 1 320px;min-width:0;background:#15131B;border:1px solid #2E2A36;border-radius:10px;padding:14px 16px;color:#F7F6FA;font-family:'CoCart Mono',monospace;font-size:15px;outline:none" style-focus="border-color:#7B57F0">
+<label style="display:flex;align-items:center;gap:12px;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5">Size <input type="range" min="13" max="160" value="{{ testerSize }}" onInput="{{ onSize }}" style="width:180px"> <span style="color:#F7F6FA;min-width:3ch">{{ testerSize }}</span></label>
+<select onChange="{{ onWeight }}" value="{{ testerWeight }}" style="background:#15131B;color:#F7F6FA;border:1px solid #2E2A36;border-radius:10px;padding:12px 14px;font-family:'CoCart Mono',monospace;font-size:13px"><option value="20">Thin</option><option value="32">ExtraLight</option><option value="44">Light</option><option value="64">Regular</option><option value="80">Medium</option><option value="90">SemiBold</option><option value="100">Bold</option><option value="112">ExtraBold</option><option value="124">Black</option></select>
+<button onClick="{{ toggleItalic }}" style="background:{{ italicBg }};color:#F7F6FA;border:1px solid #2E2A36;border-radius:10px;padding:12px 16px;font-family:'CoCart Mono',monospace;font-size:13px;cursor:pointer" style-hover="border-color:#7B57F0">Italic</button>
+</div>
+<div ref="{{ testerRef }}" style="background:#15131B;border:1px solid #24212C;border-radius:16px;padding:clamp(20px,3vw,40px);min-height:200px;overflow:hidden">
+<cc-mono text="{{ testerText }}" size="{{ testerSize }}" cols="{{ testerCols }}" italic="{{ testerItalic }}" weight="{{ testerWeight }}" leading="1300" color="#F7F6FA"></cc-mono>
+</div>
+</section>
+
+<section data-screen-label="11 Coverage" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">11</span><span>Coverage — every block complete</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px 64px">
+<p style="margin:0;font-size:17px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">{{ coverTotal }} code points across {{ blockCount }} blocks, counted live from the glyph set on this page. Beyond the alphabets: full box drawing and block elements that join seamlessly across lines, all 256 Braille patterns, spaced to tactile proportions (equal dot pitch, a wider gap between cells) for readable braille and terminal sparklines, every currency sign in Unicode up to ₿, and the ratings, wishlist and stock symbols stores use every day.</p>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Accents typed as separate marks are composed automatically (<span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ccmp</span>), so decomposed Vietnamese or Lithuanian text still gets the drawn accented letter.</p>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;overflow:hidden">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;padding:12px clamp(16px,2.4vw,24px);border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5"><span style="display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="display:flex;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span></span><span>Terminal · zsh</span></span><span style="letter-spacing:.06em;text-transform:uppercase">Sample output, set in CoCart Mono</span></div>
+<div style="padding:clamp(16px,2.4vw,28px);overflow-x:auto;display:flex;flex-direction:column;gap:14px">
+<div style="font-family:'CoCart Mono',monospace;font-size:clamp(13px,1.35vw,16px);color:#F7F6FA;white-space:pre"><span style="color:#B6A2FF">$ </span>cocart orders show CC-20491 --stats</div>
+<pre style="margin:0;font-family:'CoCart Mono',monospace;font-size:clamp(13px,1.6vw,18px);line-height:1.2;color:#E4E1EA">╭──────────────────────────────────╮
+│ ORDER #CC-20491          ★★★★☆   │
+├──────────────────────┬───────────┤
+│ Linen Throw × 2      │   $296.00 │
+│ Льняной плед × 1     │  9 900 ₽  │
+│ Καλάθι δώρου × 1     │    €45.00 │
+├──────────────────────┼───────────┤
+│ Giảm giá −30%        │   −$88.80 │
+╞══════════════════════╪═══════════╡
+│ Total                │   $975.48 │
+╰──────────────────────┴───────────╯
+ Sales 7d ⣀⣠⣤⣴⣶⣾⣿⣷⣶⣦⣤⣄  ⠉⠛⠿⣿ +18%
+ Stock ▕██████████░░░░▏ 72%  ✓ ♥ ⏎</pre>
+</div>
+</div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:16px;overflow:hidden">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 24px;padding:12px clamp(16px,2.4vw,24px);border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5"><span style="display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="display:flex;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span><span style="width:10px;height:10px;border-radius:50%;background:#3A3546"></span></span><span>Terminal · claude</span></span><span style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;color:#B6A2FF;letter-spacing:.2em">· ✢ ✳ ✶ ✻ ✽ ⏺ ⎿ ❯ ◐ ⏸ ⚠</span><button onClick="{{ agentReplay }}" style="padding:5px 10px;background:#0B0A0F;border:1px solid #2E2A36;border-radius:6px;color:#E4E1EA;font:inherit;cursor:pointer" style-hover="border-color:#7B57F0">Replay</button></span></div>
+<div ref="{{ agentRef }}" style="padding:clamp(16px,2.4vw,28px);overflow-x:auto;font-family:'CoCart Mono',monospace;font-size:clamp(13px,1.35vw,16px);line-height:1.75;color:#E4E1EA">
+<div style="white-space:pre;opacity:{{ a1 }};transition:opacity .2s"><span style="color:#B6A2FF">❯</span> refund order #CC-20491 and restock the throw</div>
+<div style="white-space:pre;opacity:{{ a2 }};transition:opacity .2s"><span style="color:#B6A2FF">⏺</span> Read(orders/CC-20491.json)</div>
+<div style="white-space:pre;color:#A9A3B5;opacity:{{ a3 }};transition:opacity .2s">  ⎿  3 items · $975.48 · paid by VISA ···· 4242</div>
+<div style="white-space:pre;opacity:{{ a4 }};transition:opacity .2s"><span style="color:#B6A2FF">⏺</span> Refund issued  $975.48 <span style="color:#7FD99A">✓</span></div>
+<div style="white-space:pre;color:#A9A3B5;opacity:{{ a5 }};transition:opacity .2s">  ⎿  stock LT-0418-OAT  12 → 13   <span style="color:#F2C14E">⚠</span> low after Friday</div>
+<div style="white-space:pre;opacity:{{ a6 }};transition:opacity .2s"><span style="color:#B6A2FF">{{ agentSpinner }}</span> Emailing the customer… <span style="color:#A9A3B5">4s · ◐ syncing · ⏸ webhooks paused</span></div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="12 Font files" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;gap:16px;align-items:baseline;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">12</span><span>On the web — install it</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:0 48px;border-top:1px solid #24212C">
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Formats</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA"><span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">woff2</span> for the web · hinted <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ttf</span> and <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">otf</span> for desktop</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Styles</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">9 weights + italics, or 2 variable files covering 100–900</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Size</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">~75 KB per static style · ~203 KB per variable file</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Scripts</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">Thai, Armenian and Georgian load only when a page uses them</span></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Features</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA"><span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">zero</span> / <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ss01</span> dotted zero · <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ss02</span> key masking (<a href="#masked">09</a>)</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Rendering</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">TrueType-hinted, so 11–14px prices stay sharp on Windows</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Metrics</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">Every glyph 600 units wide · keep line-height ≥ 1.2</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Sizes</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">13px and up · at 11–12px use Medium or SemiBold</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,7.5rem) minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5;padding-top:2px">Stylesheets</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA"><a href="fonts/css/cocart-mono.css?v=1.0.0" download="cocart-mono.css" style="font-family:'CoCart Mono',monospace">cocart-mono.css ↓</a> · <a href="fonts/css/cocart-mono-variable.css?v=1.0.0" download="cocart-mono-variable.css" style="font-family:'CoCart Mono',monospace">cocart-mono-variable.css ↓</a></span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;font-family:'CoCart Mono',monospace">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 12px 0 20px;border-bottom:1px solid #24212C">
+<div role="tablist" style="display:flex;flex-wrap:wrap;gap:0 22px;font-size:13px;letter-spacing:.06em;text-transform:uppercase">
+<sc-for list="{{ webTabs }}" as="w" hint-placeholder-count="4"><button role="tab" onClick="{{ w.pick }}" style="background:none;border:0;border-bottom:2px solid {{ w.bd }};padding:14px 0 12px;color:{{ w.co }};font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer" style-hover="color:#F7F6FA">{{ w.name }}</button></sc-for>
+</div>
+<button onClick="{{ webCopy }}" style="padding:5px 10px;background:#0B0A0F;border:1px solid #2E2A36;border-radius:6px;color:#E4E1EA;font:inherit;font-size:13px;cursor:pointer" style-hover="border-color:#7B57F0">{{ webCopyLabel }}</button>
+</div>
+<div style="padding:10px 20px 0;font-size:13px;color:#A9A3B5">{{ webFile }}</div>
+<div style="padding:10px 20px 20px;display:flex;flex-direction:column;overflow-x:auto;font-size:14px;line-height:1.7">
+<sc-for list="{{ webLines }}" as="ln" hint-placeholder-count="5"><div style="display:flex;gap:20px;white-space:pre"><span style="color:#4A4555;min-width:2ch;text-align:right">{{ ln.n }}</span><span style="color:{{ ln.co }}">{{ ln.t }}</span></div></sc-for>
+</div>
+</div>
+<ul style="margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;color:#A9A3B5">
+<li>Never put <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">ss02</span> or CoCart Mono Masked on a storefront. It hides text from shoppers too.</li>
+<li>For 800–900 headlines, use the static files. The variable font's heaviest curves are slightly rough at display sizes.</li>
+</ul>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:100;font-style:normal;color:#F7F6FA">Thin</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Thin.woff2" download="CoCart-Mono-Thin.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Thin.otf" download="CoCart-Mono-Thin.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:100;font-style:italic;color:#F7F6FA">Thin Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Thin-Italic.woff2" download="CoCart-Mono-Thin-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Thin-Italic.otf" download="CoCart-Mono-Thin-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:200;font-style:normal;color:#F7F6FA">ExtraLight</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-ExtraLight.woff2" download="CoCart-Mono-ExtraLight.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-ExtraLight.otf" download="CoCart-Mono-ExtraLight.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:200;font-style:italic;color:#F7F6FA">ExtraLight Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-ExtraLight-Italic.woff2" download="CoCart-Mono-ExtraLight-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-ExtraLight-Italic.otf" download="CoCart-Mono-ExtraLight-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:300;font-style:normal;color:#F7F6FA">Light</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Light.woff2" download="CoCart-Mono-Light.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Light.otf" download="CoCart-Mono-Light.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:300;font-style:italic;color:#F7F6FA">Light Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Light-Italic.woff2" download="CoCart-Mono-Light-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Light-Italic.otf" download="CoCart-Mono-Light-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:400;font-style:normal;color:#F7F6FA">Regular</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Regular.woff2" download="CoCart-Mono-Regular.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Regular.otf" download="CoCart-Mono-Regular.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:400;font-style:italic;color:#F7F6FA">Regular Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Regular-Italic.woff2" download="CoCart-Mono-Regular-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Regular-Italic.otf" download="CoCart-Mono-Regular-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:500;font-style:normal;color:#F7F6FA">Medium</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Medium.woff2" download="CoCart-Mono-Medium.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Medium.otf" download="CoCart-Mono-Medium.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:500;font-style:italic;color:#F7F6FA">Medium Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Medium-Italic.woff2" download="CoCart-Mono-Medium-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Medium-Italic.otf" download="CoCart-Mono-Medium-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:600;font-style:normal;color:#F7F6FA">SemiBold</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-SemiBold.woff2" download="CoCart-Mono-SemiBold.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-SemiBold.otf" download="CoCart-Mono-SemiBold.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:600;font-style:italic;color:#F7F6FA">SemiBold Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-SemiBold-Italic.woff2" download="CoCart-Mono-SemiBold-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-SemiBold-Italic.otf" download="CoCart-Mono-SemiBold-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:700;font-style:normal;color:#F7F6FA">Bold</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Bold.woff2" download="CoCart-Mono-Bold.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Bold.otf" download="CoCart-Mono-Bold.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:700;font-style:italic;color:#F7F6FA">Bold Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Bold-Italic.woff2" download="CoCart-Mono-Bold-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Bold-Italic.otf" download="CoCart-Mono-Bold-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:800;font-style:normal;color:#F7F6FA">ExtraBold</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-ExtraBold.woff2" download="CoCart-Mono-ExtraBold.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-ExtraBold.otf" download="CoCart-Mono-ExtraBold.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:800;font-style:italic;color:#F7F6FA">ExtraBold Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-ExtraBold-Italic.woff2" download="CoCart-Mono-ExtraBold-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-ExtraBold-Italic.otf" download="CoCart-Mono-ExtraBold-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:900;font-style:normal;color:#F7F6FA">Black</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Black.woff2" download="CoCart-Mono-Black.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Black.otf" download="CoCart-Mono-Black.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#15131B;border:1px solid #24212C;border-radius:10px"><span style="font-family:'CoCart Mono',monospace;font-size:15px;font-weight:900;font-style:italic;color:#F7F6FA">Black Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/woff2/CoCart-Mono-Black-Italic.woff2" download="CoCart-Mono-Black-Italic.woff2" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/otf/CoCart-Mono-Black-Italic.otf" download="CoCart-Mono-Black-Italic.otf" style="padding:4px 8px;border:1px solid #2E2A36;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">otf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#24212C;border:1px solid #2E2A36;border-radius:10px"><span style="font-family:'CoCart Mono VF',monospace;font-size:15px;font-weight:500;font-style:normal;color:#F7F6FA">Variable 100–900</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/variable/CoCart-Mono-Variable.woff2" download="CoCart-Mono-Variable.woff2" style="padding:4px 8px;border:1px solid #3A3544;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/variable/CoCart-Mono-Variable.ttf" download="CoCart-Mono-Variable.ttf" style="padding:4px 8px;border:1px solid #3A3544;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">ttf</a></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 16px;background:#24212C;border:1px solid #2E2A36;border-radius:10px"><span style="font-family:'CoCart Mono VF',monospace;font-size:15px;font-weight:500;font-style:italic;color:#F7F6FA">Variable Italic</span><span style="display:flex;gap:6px;font-family:'CoCart Mono',monospace;font-size:13px"><a href="fonts/variable/CoCart-Mono-Variable-Italic.woff2" download="CoCart-Mono-Variable-Italic.woff2" style="padding:4px 8px;border:1px solid #3A3544;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">woff2</a><a href="fonts/variable/CoCart-Mono-Variable-Italic.ttf" download="CoCart-Mono-Variable-Italic.ttf" style="padding:4px 8px;border:1px solid #3A3544;border-radius:6px;text-decoration:none" style-hover="border-color:#7B57F0">ttf</a></span></div>
+</div>
+</section>
+
+<section id="download" data-screen-label="13 Download" style="padding:clamp(40px,6vw,80px) 0;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 56px;font-family:'CoCart Mono',monospace">
+<div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:13px;letter-spacing:.08em;color:#B6A2FF">13</span><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;color:#F7F6FA">Download</h2><p style="margin:0;font-family:'Instrument Sans',system-ui,sans-serif;font-size:20px;line-height:1.3;color:#E4E1EA">Free, for anything you make.</p></div>
+<div style="flex:0 1 320px;min-width:min(100%,240px);display:flex;flex-direction:column;font-size:13px">
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #24212C"><span style="letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Version</span><span style="color:#F7F6FA">1.0.0</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #24212C"><span style="letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">Builds</span><span style="color:#F7F6FA">2</span></div>
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #24212C"><span style="letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">License</span><a href="OFL.txt" style="color:#F7F6FA">SIL OFL 1.1</a></div>
+</div>
+</div>
+<div style="min-width:0;display:flex;flex-direction:column;gap:clamp(48px,6vw,72px)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:40px 32px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+<a href="https://github.com/cocart-headless/cocart-mono-font/releases/download/v1.0.0/CoCart-Mono-1.0.0.zip" download="CoCart-Mono-1.0.0.zip" style="align-self:flex-start;display:flex;align-items:center;gap:12px;font-family:'CoCart Mono',monospace;font-size:clamp(28px,3.4vw,44px);font-weight:500;letter-spacing:-.02em;line-height:1.15;color:#F7F6FA;text-decoration:none;border-bottom:3px solid #7B57F0;padding-bottom:4px" style-hover="color:#B6A2FF">Download the zip <span style="color:#B6A2FF">↓</span></a>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#A9A3B5;text-wrap:pretty">CoCart Mono and CoCart Mono Masked · Roman and Italic · TTF and WOFF2 · the license · 12.2 MB</p>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
+<div role="tablist" style="display:flex;gap:24px;padding:0 20px;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase">
+<button role="tab" onClick="{{ tabMac.pick }}" style="background:none;border:0;border-bottom:2px solid {{ tabMac.bd }};padding:14px 0 12px;color:{{ tabMac.co }};font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">macOS</button>
+<button role="tab" onClick="{{ tabWin.pick }}" style="background:none;border:0;border-bottom:2px solid {{ tabWin.bd }};padding:14px 0 12px;color:{{ tabWin.co }};font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">Windows</button>
+<button role="tab" onClick="{{ tabLinux.pick }}" style="background:none;border:0;border-bottom:2px solid {{ tabLinux.bd }};padding:14px 0 12px;color:{{ tabLinux.co }};font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer">Linux</button>
+</div>
+<div style="padding:18px 20px;overflow-x:auto;display:flex;flex-direction:column;font-family:'CoCart Mono',monospace;font-size:13px;line-height:1.55;color:#F7F6FA">
+<div style="white-space:pre"><span>CoCart-Mono-1.0.0.zip                     </span><span style="color:#A9A3B5">12.2 MB</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">├─ </span>CoCart-Mono/</div>
+<div style="white-space:pre"><span style="color:#6B6578">│  ├─ </span>ttf/variable     <span style="color:#A9A3B5"> 2   Roman, Italic, 100–900</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">│  ├─ </span>ttf/static       <span style="color:#A9A3B5">18   every weight, hinted</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">│  ├─ </span>ttf/scripts      <span style="color:#A9A3B5">54   Thai, Armenian, Georgian</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">│  └─ </span>woff2            <span style="color:#A9A3B5">74   with two stylesheets</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">├─ </span>CoCart-Mono-Masked/   <span style="color:#A9A3B5">   the same, masking on</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">├─ </span>OFL.txt               <span style="color:#A9A3B5">   the license</span></div>
+<div style="white-space:pre"><span style="color:#6B6578">└─ </span>README.txt</div>
+</div>
+<div style="padding:16px 20px;border-top:1px solid #24212C;font-size:15px;line-height:1.55;color:#E4E1EA;text-wrap:pretty">
+<sc-if value="{{ isMac }}" hint-placeholder-val="{{ false }}">Open the <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">variable</span> folder, select both <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">.ttf</span> files, double-click, then <strong style="color:#F7F6FA;font-weight:600">Install</strong>. Restart your terminal.</sc-if>
+<sc-if value="{{ isWin }}" hint-placeholder-val="{{ true }}">Open the <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">variable</span> folder, select its <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">.ttf</span> files, right-click, then <strong style="color:#F7F6FA;font-weight:600">Install for all users</strong>. For 11–14px text, install <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">static</span> instead: it carries the ClearType hinting. Restart your terminal.</sc-if>
+<sc-if value="{{ isLinux }}" hint-placeholder-val="{{ false }}">Copy the <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">variable</span> folder into <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">~/.local/share/fonts</span>, then run <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">fc-cache -f</span>. Restart your terminal.</sc-if>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px 18px;padding:14px 20px;border-top:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase">
+<span style="color:#A9A3B5">Just one file:</span>
+<a href="fonts/variable/CoCart-Mono-Variable.ttf" download="CoCart-Mono-Variable.ttf" style="color:#F7F6FA">Mono TTF</a>
+<a href="fonts/variable/CoCart-Mono-Variable.woff2" download="CoCart-Mono-Variable.woff2" style="color:#F7F6FA">Mono WOFF2</a>
+<a href="fonts/variable/CoCart-Mono-Masked-Variable.ttf" download="CoCart-Mono-Masked-Variable.ttf" style="color:#F7F6FA">Masked TTF</a>
+<a href="fonts/variable/CoCart-Mono-Masked-Variable.woff2" download="CoCart-Mono-Masked-Variable.woff2" style="color:#F7F6FA">Masked WOFF2</a>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+<h3 style="margin:0;font-family:'CoCart Mono',monospace;font-size:clamp(28px,3.4vw,44px);font-weight:500;letter-spacing:-.02em;line-height:1.15;color:#F7F6FA;padding-bottom:7px">Install it in one line</h3>
+<p style="margin:0;font-size:15px;line-height:1.5;color:#A9A3B5;text-wrap:pretty">Both builds, Roman and Italic, into your fonts folder, the zip checked against its SHA-256 first. No sudo. <a href="install.sh" style="color:#F7F6FA">Read it first</a>.</p>
+<div ref="{{ dlTermRef }}" style="background:#15131B;border:1px solid #24212C;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;font-family:'CoCart Mono',monospace">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 12px 10px 20px;border-bottom:1px solid #24212C;font-size:13px;color:#A9A3B5"><span>Terminal · macOS and Linux</span><span style="display:flex;gap:6px"><button onClick="{{ replay }}" style="padding:5px 10px;background:#0B0A0F;border:1px solid #2E2A36;border-radius:6px;color:#E4E1EA;font:inherit;cursor:pointer" style-hover="border-color:#7B57F0">Replay</button><button onClick="{{ installCopy }}" style="padding:5px 10px;background:#0B0A0F;border:1px solid #2E2A36;border-radius:6px;color:#E4E1EA;font:inherit;cursor:pointer" style-hover="border-color:#7B57F0">{{ installCopyLabel }}</button></span></div>
+<div style="padding:18px 20px;border-bottom:1px solid #24212C;font-size:clamp(13px,1.3vw,16px);color:#F7F6FA;overflow-x:auto;white-space:nowrap"><span style="color:#B6A2FF">$ </span>curl -fsSL https://cocart-headless.github.io/cocart-mono-font/install.sh | sh</div>
+<div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:16px;font-size:13px;line-height:1.5;min-height:210px">
+<div style="display:flex;gap:16px;align-items:center;opacity:{{ t1 }};transition:opacity .25s"><span style="font-size:44px;line-height:1;color:#B6A2FF">✳</span><span style="display:flex;flex-direction:column"><span style="color:#F7F6FA;font-weight:700">CoCart Mono 1.0.0</span><span style="color:#A9A3B5">a free font from CoCart</span><span style="color:#A9A3B5">cocart-headless.github.io/cocart-mono-font</span></span></div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<sc-for list="{{ termRows }}" as="r" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:1.5em minmax(0,11em) minmax(0,1fr);gap:2px 8px;align-items:center;opacity:{{ r.show }}"><span style="color:#B6A2FF">{{ r.icon }}</span><span style="color:#F7F6FA;font-weight:700;white-space:nowrap">{{ r.name }}</span><sc-if value="{{ r.done }}" hint-placeholder-val="{{ true }}"><span style="display:flex;flex-wrap:wrap;gap:0 14px;color:#A9A3B5"><span>{{ r.size }}</span><span><span style="color:#F7F6FA;font-weight:700">sha-256 e9613bd4</span> verified</span></span></sc-if><sc-if value="{{ r.busy }}" hint-placeholder-val="{{ false }}"><span style="display:flex;align-items:center;gap:14px;color:#A9A3B5;white-space:nowrap"><span style="flex:none;width:110px;height:3px;background:#3A3546;border-radius:2px;overflow:hidden"><span style="display:block;height:100%;width:{{ r.pct }};background:#B6A2FF"></span></span><span>{{ r.got }}</span></span></sc-if></div></sc-for>
+</div>
+<div style="display:grid;grid-template-columns:1.5em minmax(0,11em) minmax(0,1fr);gap:2px 8px;opacity:{{ tInstalled }};transition:opacity .25s"><span style="color:#B6A2FF">✓</span><span style="color:#F7F6FA;font-weight:700">Installed</span><span style="display:flex;flex-direction:column;color:#A9A3B5"><span style="color:#F7F6FA">variable 100–900, roman and italic</span><span>~/Library/Fonts</span></span></div>
+<div style="color:#B6A2FF;opacity:{{ tPrompt }};transition:opacity .25s">$ <span style="color:#F7F6FA;opacity:{{ cursorOn }}">▍</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;border-top:1px solid #24212C;padding-top:20px">
+<div style="display:flex;gap:10px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5"><span style="color:#B6A2FF">↓</span><span style="color:#F7F6FA">Set it up</span><span>· Pick your app for its settings</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:32px 40px;align-items:flex-start">
+<div style="flex:1 1 460px;min-width:0;background:#15131B;border:1px solid #24212C;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 20px"><span style="display:flex;align-items:center;gap:12px;font-family:'CoCart Mono',monospace;font-size:24px;font-weight:500;color:#F7F6FA"><span aria-hidden="true" style="flex:none;width:24px;height:24px;background:currentColor;-webkit-mask:{{ appIcon }} center/contain no-repeat;mask:{{ appIcon }} center/contain no-repeat"></span>{{ appName }}</span><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">{{ appKind }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:#24212C;border-top:1px solid #24212C;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px">
+<div style="background:#15131B;padding:12px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Font</span><span style="color:#F7F6FA">{{ appFont }}</span></div>
+<div style="background:#15131B;padding:12px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Size</span><span style="color:#F7F6FA">{{ appSize }}</span></div>
+<div style="background:#15131B;padding:12px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Mask secrets</span><span style="color:#F7F6FA">{{ appMask }}</span></div>
+</div>
+<div style="background:#0B0A0F;padding:12px 12px 18px 20px;display:flex;flex-direction:column;gap:10px;font-family:'CoCart Mono',monospace">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><span style="font-size:13px;color:#A9A3B5;overflow-wrap:anywhere">{{ appFile }}</span><button onClick="{{ configCopy }}" style="padding:5px 10px;background:#15131B;border:1px solid #2E2A36;border-radius:6px;color:#E4E1EA;font:inherit;font-size:13px;cursor:pointer" style-hover="border-color:#7B57F0">{{ configCopyLabel }}</button></div>
+<div style="display:flex;flex-direction:column;overflow-x:auto;font-size:15px;line-height:1.75">
+<sc-for list="{{ appLines }}" as="ln" hint-placeholder-count="3"><div style="display:flex;gap:20px;white-space:pre"><span style="color:#4A4555;min-width:1ch;text-align:right">{{ ln.n }}</span><span style="color:#E4E1EA">{{ ln.t }}</span></div></sc-for>
+</div>
+</div>
+<div style="padding:14px 20px;border-top:1px solid #24212C;display:flex;flex-direction:column;gap:8px;font-family:'CoCart Mono Masked',monospace;font-size:13px;line-height:1.5">
+<div style="display:flex;justify-content:space-between;gap:12px;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase"><span style="color:#A9A3B5">What you'll see</span><span style="color:#B6A2FF">Keys as dots</span></div>
+<div style="color:#F7F6FA;overflow-x:auto;display:flex;flex-direction:column;white-space:pre"><div><span style="color:#B6A2FF">$ </span>env | grep -E "TOKEN|SECRET"</div><div>GITHUB_TOKEN=ghp_7Fq2LmX9aB4cD8eR1tY6uI0oP3sZ5nK2wV7h</div><div>WOO_CONSUMER_SECRET=cs_9b8a7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b</div></div>
+</div>
+<div style="padding:14px 20px;border-top:1px solid #24212C;font-size:14px;line-height:1.5;color:#A9A3B5;text-wrap:pretty">{{ appNote }}</div>
+</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:24px;font-family:'CoCart Mono',monospace">
+<sc-for list="{{ appGroups }}" as="g" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;gap:12px;padding-bottom:8px;border-bottom:1px solid #24212C;font-size:13px;letter-spacing:.08em;text-transform:uppercase"><span style="display:flex;gap:8px"><span style="color:#B6A2FF">{{ g.name }}</span><sc-if value="{{ g.hasNote }}" hint-placeholder-val="{{ false }}"><span style="color:#A9A3B5">· {{ g.note }}</span></sc-if></span><span style="color:#A9A3B5">{{ g.n }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0 16px">
+<sc-for list="{{ g.items }}" as="it" hint-placeholder-count="3"><button onClick="{{ it.pick }}" style="display:flex;gap:8px;align-items:center;min-height:44px;padding:0 2px;background:none;border:0;border-bottom:1px solid {{ it.bd }};color:{{ it.co }};font:inherit;font-size:13px;text-align:left;cursor:pointer" style-hover="color:#F7F6FA"><span aria-hidden="true" style="flex:none;width:16px;height:16px;background:currentColor;-webkit-mask:{{ it.icon }} center/contain no-repeat;mask:{{ it.icon }} center/contain no-repeat"></span>{{ it.name }}</button></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer data-screen-label="Footer" style="padding:clamp(40px,6vw,64px) 0 40px;border-top:1px solid #24212C;display:flex;flex-direction:column;gap:40px;font-size:14px;line-height:1.5">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:16px;color:#F7F6FA">CoCart Mono 1.0.0</span><span style="color:#A9A3B5;text-wrap:pretty">A monospaced typeface for storefronts, carts and command lines.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Licence</span><span style="color:#E4E1EA">SIL Open Font License 1.1</span><span style="color:#A9A3B5;text-wrap:pretty">Free to use, embed and modify. Don't sell the fonts on their own.</span><a href="https://openfontlicense.org" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Read the licence ↗</a></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Project</span><a href="https://github.com/cocart-headless/cocart-mono-font" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">GitHub ↗</a><a href="https://github.com/cocart-headless/cocart-mono-font/issues" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Report an issue ↗</a><a href="https://cocartheadless.com" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">cocartheadless.com ↗</a></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Get it</span><a href="#download" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Download</a><a href="#masked" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Masked variant</a></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5"><span>© 2026 CoCart Headless</span></div>
+</footer>
+
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;weight&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:64,&quot;min&quot;:40,&quot;max&quot;:110,&quot;step&quot;:2,&quot;unit&quot;:&quot;u&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Typeface&quot;},&quot;terminals&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cut&quot;,&quot;Round&quot;],&quot;default&quot;:&quot;Cut&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Typeface&quot;},&quot;zero&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Slashed&quot;,&quot;Dotted&quot;],&quot;default&quot;:&quot;Slashed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Typeface&quot;}}">
+class Component extends DCLogic {
+  state = { maskText: 'WOO_CONSUMER_SECRET=cs_9b8a7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b', sel: '$', testerText: 'Order #CC-20491 · 3 items · $975.48 · Ships Tuesday', testerSize: 48, width: 900 };
+  testerRef = React.createRef();
+  inspRef = React.createRef();
+  MW = [['Thin', 100, 20], ['ExtraLight', 200, 32], ['Light', 300, 44], ['Regular', 400, 64], ['Medium', 500, 80], ['SemiBold', 600, 90], ['Bold', 700, 100], ['ExtraBold', 800, 112], ['Black', 900, 124]];
+  strokeOf = w => { const M = this.MW; for (let i = 1; i < M.length; i++) { const [, a, sa] = M[i - 1], [, b, sb] = M[i]; if (w <= b) return Math.round(sa + (sb - sa) * (w - a) / (b - a)); } return 124; };
+  // Plate 03: a warehouse floor in box drawing; a picker's route between random bins is found (BFS) and drawn live
+  PickPath = (() => {
+    const h = React.createElement, W = 31, H = 19, RACKS = [3, 8, 13, 18, 23], START = [2, 16];
+    const CH = { 3: '┃', 12: '━', 10: '┏', 6: '┓', 9: '┗', 5: '┛', 11: '┣', 7: '┫', 14: '┳', 13: '┻', 15: '╋', 1: '┃', 2: '┃', 4: '━', 8: '━', 0: '━' };
+    const floor = () => {
+      const g = Array.from({ length: H }, () => Array(W).fill(' '));
+      for (let x = 0; x < W; x++) { g[0][x] = '─'; g[H - 1][x] = '─'; }
+      for (let y = 0; y < H; y++) { g[y][0] = '│'; g[y][W - 1] = '│'; }
+      g[0][0] = '┌'; g[0][W - 1] = '┐'; g[H - 1][0] = '└'; g[H - 1][W - 1] = '┘';
+      RACKS.forEach((x, i) => { g[2][x] = 'ABCDE'[i]; g[2][x + 1] = String(i + 1); for (let y = 3; y <= 14; y++) if (y !== 8 && y !== 9) { g[y][x] = '▒'; g[y][x + 1] = '▒'; } });
+      [...'PACK'].forEach((c, i) => g[17][2 + i] = c);
+      return g;
+    };
+    const plan = () => {
+      const g = floor(), free = (x, y) => g[y] && g[y][x] === ' ';
+      const cands = []; RACKS.forEach(x => { for (let y = 3; y <= 14; y++) if (g[y][x] === '▒') { if (free(x - 1, y)) cands.push([x, y, x - 1]); if (free(x + 2, y)) cands.push([x + 1, y, x + 2]); } });
+      const picks = []; while (picks.length < 6) { const c = cands[Math.floor(Math.random() * cands.length)]; if (!picks.some(p => Math.abs(p[1] - c[1]) < 2 && Math.abs(p[0] - c[0]) < 3)) picks.push(c); }
+      picks.forEach(([x, y]) => g[y][x] = '◆');
+      const bfs = (a, b) => { const prev = new Map(), k = (x, y) => x + ',' + y, q = [a]; prev.set(k(...a), null);
+        while (q.length) { const [x, y] = q.shift(); if (x === b[0] && y === b[1]) break; [[1, 0], [-1, 0], [0, 1], [0, -1]].forEach(([dx, dy]) => { const n = [x + dx, y + dy]; if (free(...n) && !prev.has(k(...n))) { prev.set(k(...n), [x, y]); q.push(n); } }); }
+        const out = []; let c = b; while (c) { out.unshift(c); c = prev.get(k(...c)); } return out; };
+      let at = START, path = [START], left = picks.slice(), order = [];
+      while (left.length) { let best = null; left.forEach(p => { const r = bfs(at, [p[2], p[1]]); if (!best || r.length < best.r.length) best = { p, r }; }); path = path.concat(best.r.slice(1)); order.push([path.length - 1, best.p]); at = [best.p[2], best.p[1]]; left = left.filter(p => p !== best.p); }
+      path = path.concat(bfs(at, START).slice(1));
+      return { g, path, order };
+    };
+    return function PickPath() {
+      const [st, set] = React.useState(() => ({ ...plan(), k: 0 }));
+      React.useEffect(() => { const t = setInterval(() => set(s => s.k < s.path.length + 40 ? { ...s, k: s.k + 1 } : { ...plan(), k: 0 }), 55); return () => clearInterval(t); }, []);
+      const { g, path, order } = st, k = Math.min(st.k, path.length - 1), dirs = new Map(), key = (x, y) => x + ',' + y;
+      for (let i = 0; i <= k; i++) { const [x, y] = path[i], m = dirs.get(key(x, y)) || 0; let d = m;
+        [path[i - 1], i < k ? path[i + 1] : null].forEach(n => { if (!n) return; d |= n[1] < y ? 1 : n[1] > y ? 2 : n[0] < x ? 4 : 8; }); dirs.set(key(x, y), d); }
+      const done = new Set(order.filter(([i]) => i <= k).map(([, p]) => key(p[0], p[1])));
+      const rows = g.map((row, y) => { const runs = []; row.forEach((c, x) => { let t = c, col = '#6B6578';
+          if (c === '▒') col = '#4A4556'; else if (/[A-E1-5]/.test(c) || 'PACK'.includes(c) && y === 17) col = '#A9A3B5';
+          if (c === '◆') col = done.has(key(x, y)) ? '#B6A2FF' : '#F7F6FA';
+          const d = dirs.get(key(x, y)); if (d !== undefined) { t = CH[d]; col = '#B6A2FF'; }
+          if (path[k][0] === x && path[k][1] === y && st.k < path.length) { t = '●'; col = '#F7F6FA'; }
+          const last = runs[runs.length - 1]; if (last && last.c === col) last.t += t; else runs.push({ t, c: col }); });
+        return h('div', { key: y }, runs.map((r, i) => h('span', { key: i, style: { color: r.c } }, r.t))); });
+      const span = t => h('span', null, t);
+      return h(React.Fragment, null,
+        h('div', { style: { fontFamily: "'CoCart Mono', monospace", whiteSpace: 'pre', lineHeight: 1.2, fontSize: 'calc(100cqw / ' + (0.6 * W) + ')' } }, rows),
+        h('div', { style: { marginTop: 'auto', display: 'flex', justifyContent: 'space-between', gap: 12, paddingTop: 10, borderTop: '2px solid currentColor', fontFamily: "'CoCart Mono', monospace", fontSize: 13 } },
+          span('Racks ▒ · bins ◆'), span(Math.min(st.k, path.length - 1) + ' steps'), span('Solved live')));
+    };
+  })();
+  applyFont() {
+    const s = {
+      weight: this.props.weight ?? 64,
+      cap: (this.props.terminals ?? 'Cut') === 'Round' ? 'round' : 'cut',
+      zero: (this.props.zero ?? 'Slashed') === 'Dotted' ? 'dot' : 'slash',
+      ref: false
+    };
+    window.__ccMono = s;
+    if (window.CCMono) window.CCMono.set(s);
+  }
+  componentDidMount() {
+    setTimeout(() => this.mountDl(), 0);
+    this.applyFont();
+    this.t = setInterval(() => { if (window.CCMono && window.CCMask) { this.applyFont(); clearInterval(this.t); this.forceUpdate(); } }, 100);
+    // the glyph panel is sticky only while it sits beside the character grid; stacked, it would slide over it
+    const ig = this.inspRef.current;
+    if (ig && window.ResizeObserver) {
+      this.iro = new ResizeObserver(() => { const two = ig.children.length > 1 && ig.children[0].offsetTop === ig.children[1].offsetTop; if (two !== !!this.state.inspTwo) this.setState({ inspTwo: two }); });
+      this.iro.observe(ig);
+    }
+    const el = this.testerRef.current;
+    if (el && window.ResizeObserver) {
+      this.ro = new ResizeObserver(() => {
+        const cs = getComputedStyle(el);
+        const w = el.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        if (Math.abs(w - this.state.width) > 2) this.setState({ width: w });
+      });
+      this.ro.observe(el);
+    }
+  }
+  componentDidUpdate() { this.applyFont(); }
+  componentWillUnmount() { clearInterval(this.twatch); clearTimeout(this.tt); this.onDlClick && document.removeEventListener('click', this.onDlClick, true); clearInterval(this.at); this.aio && this.aio.disconnect(); this.tocOff && this.tocOff(); clearInterval(this.tt); clearTimeout(this.dct); this.dio && this.dio.disconnect(); clearInterval(this.t); clearTimeout(this.ct); this.ro && this.ro.disconnect(); this.iro && this.iro.disconnect(); }
+  renderVals() {
+    const { sel, testerText, testerSize, width } = this.state;
+    const C = window.CCMono;
+    const skip = c => /[\u2000-\u200B\u2060\uFEFF\u00A0\u202F\u205F\u00AD ]/.test(c);
+    const sets = C ? C.coverage.map(b => [b.name, b.cps.map(cp => String.fromCharCode(cp)).filter(c => !skip(c) && C.glyphs[c]).map(c => C.glyphs[c].adv === 0 ? '◌' + c : c)]) : [];
+    const MW = this.MW, selW = this.state.selW ?? 400, selIt = !!this.state.selIt;
+    // combining marks are listed as '◌' + mark; U+25CC itself must stay intact
+    const base = c => c.length > 1 && c[0] === '◌' ? c.slice(1) : c;
+    const ORDER = ['Essentials', 'Accented', 'Cyrillic', 'Greek', 'Thai', 'Armenian', 'Georgian', 'Punctuation', 'Currency', 'Math & arrows', 'Super & sub', 'Box drawing', 'Blocks & shapes', 'Braille', 'Agent marks'];
+    const cls = (b, ch) => { const c = base(ch).codePointAt(0), n = b.toLowerCase();
+      if (/agent/.test(n)) return 'Agent marks'; if (/braille/.test(n)) return 'Braille';
+      if (/thai/.test(n)) return 'Thai'; if (/armenian/.test(n)) return 'Armenian'; if (/georgian/.test(n)) return 'Georgian';
+      if (/cyrillic/.test(n)) return 'Cyrillic'; if (/greek/.test(n)) return 'Greek';
+      if (/box/.test(n)) return 'Box drawing'; if (/block|shape|special/.test(n)) return 'Blocks & shapes';
+      if (/currency/.test(n) || (c >= 0xA2 && c <= 0xA5)) return 'Currency';
+      if (/super/.test(n) || [0xB9, 0xB2, 0xB3, 0xAA, 0xBA].includes(c)) return 'Super & sub';
+      if (c < 0x80) return 'Essentials';
+      if (/arrow|math|letterlike/.test(n) || [0xB0, 0xB1, 0xD7, 0xF7, 0xAC, 0xB5, 0xBC, 0xBD, 0xBE].includes(c)) return 'Math & arrows';
+      if ((c >= 0xA0 && c <= 0xBF) || /punct/.test(n)) return 'Punctuation';
+      if (/latin|vietnam|combining/.test(n)) return 'Accented';
+      return b; };
+    const gm = new Map(ORDER.map(g => [g, []]));
+    sets.forEach(([b, cs]) => cs.forEach(ch => { const g = cls(b, ch); if (!gm.has(g)) gm.set(g, []); if (!gm.get(g).includes(ch)) gm.get(g).push(ch); }));
+    const csets = [...gm].filter(([, cs]) => cs.length);
+    const mode = this.state.gmode || 'chars', alts = mode === 'alts';
+    const tsets = alts ? this.ALTS.map(([n, items]) => [n, items.map(x => x[0])]) : csets;
+    const tab = tsets.some(s => s[0] === this.state.tab) ? this.state.tab : (tsets[0] && tsets[0][0]);
+    const q = alts ? '' : (this.state.findQ || '').trim();
+    let list = (tsets.find(s => s[0] === tab) || [null, []])[1], gridTitle = tab || '';
+    const altRec = this.state.alt ? this.ALTS.flatMap(([g, items, tag]) => items.map(([ch, name]) => ({ ch, name, tag, g }))).find(a => a.name === this.state.alt) : null;
+    const altGroup = alts && this.ALTS.find(a => a[0] === tab);
+    if (q) {
+      const all = sets.flatMap(([n, cs]) => cs.map(c => [n, c]));
+      const hex = q.match(/^(?:u\+|0x)([0-9a-f]{2,6})$/i) || q.match(/^([0-9a-f]{4,5})$/i);
+      const qs = new Set([...q]);
+      const hits = hex ? all.filter(([, c]) => base(c).codePointAt(0) === parseInt(hex[1], 16))
+        : all.filter(([n, c]) => (q.length > 2 && n.toLowerCase().includes(q.toLowerCase())) || qs.has(base(c)));
+      list = [...new Set(hits.map(x => x[1]))].slice(0, 600); gridTitle = 'Results for “' + q + '”';
+    }
+    const cp = c => 'U+' + base(c).codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
+    const inspector = {
+      modeChars: { co: !alts ? '#F7F6FA' : '#A9A3B5', bd: !alts ? '#B6A2FF' : 'transparent', pick: () => this.setState({ gmode: 'chars', alt: null }) },
+      modeAlts: { co: alts ? '#F7F6FA' : '#A9A3B5', bd: alts ? '#B6A2FF' : 'transparent', pick: () => this.setState({ gmode: 'alts', findQ: '' }) },
+      charTotal: csets.reduce((a, [, cs]) => a + cs.length, 0).toLocaleString('en-US'),
+      altTotal: this.ALTS.reduce((a, [, items]) => a + items.length, 0),
+      isChars: !alts,
+      selTitle: altRec ? altRec.name : (csets.find(([, cs]) => cs.includes(sel)) || ['Glyph'])[0],
+      selTag: altRec ? altRec.tag : 'U+' + [...sel].map(c => c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')).join(' U+'),
+      selSub: altRec ? altRec.g + ' · ' + cp(altRec.ch) : [...base(sel)].map(c => '&#x' + c.codePointAt(0).toString(16).toUpperCase() + ';').join(''),
+      selZero: altRec && altRec.tag.includes('zero') ? 'dot' : '',
+      selItalicDraw: altRec && altRec.tag === 'italic' ? '1' : (selIt ? '1' : '0'),
+      tabs: tsets.map(([n, cs]) => ({ name: n, n: cs.length, pick: () => this.setState({ tab: n, findQ: '' }), bd: !q && n === tab ? '#B6A2FF' : 'transparent', co: !q && n === tab ? '#F7F6FA' : '#A9A3B5' })),
+      findQ: this.state.findQ || '', onFind: e => this.setState({ findQ: e.target.value }),
+      gridTitle, gridCount: list.length,
+      gridItems: altGroup ? altGroup[1].map(([ch, name]) => { const on = altRec && altRec.name === name; return { ch, code: name, pick: () => this.setState({ sel: ch, alt: name }), bg: on ? '#F7F6FA' : '#0B0A0F', co: on ? '#0B0A0F' : '#F7F6FA', fs: altGroup[2] === 'italic' ? 'italic' : 'normal', ff: altGroup[2] === 'italic' ? 'normal' : "'zero' 1" }; })
+        : list.map(ch => { const on = ch === sel && !altRec; return { ch, code: cp(ch), pick: () => this.setState({ sel: ch, alt: null }), bg: on ? '#F7F6FA' : '#0B0A0F', co: on ? '#0B0A0F' : '#F7F6FA', fs: selIt ? 'italic' : 'normal', ff: 'normal' }; }),
+      selBlock: (sets.find(([, cs]) => cs.includes(sel)) || ['Glyph'])[0],
+      selEntity: [...base(sel)].map(c => '&#x' + c.codePointAt(0).toString(16).toUpperCase() + ';').join(''),
+      selWght: selW, selStroke: this.strokeOf(selW), selWeightName: (MW.find(m => m[1] === Math.round(selW / 100) * 100) || MW[3])[0],
+      onSelWght: e => this.setState({ selW: +e.target.value }),
+      selItalic: selIt ? '1' : '0', selFontStyle: selIt ? 'italic' : 'normal', selItalicBg: selIt ? '#5B3BD1' : '#0B0A0F',
+      toggleSelItalic: () => this.setState({ selIt: !selIt }),
+      copyLabel: this.state.copied ? 'Copied' : 'Copy',
+      copySel: () => { const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 1200); };
+        if (navigator.clipboard) navigator.clipboard.writeText(base(sel)).then(done, () => {}); },
+    };
+    const famText = 'Your order ships Tuesday · $975.48', famSize = this.state.famSize || 'Fit';
+    const family = {
+      famText, famRows: MW.map(([name, w, s]) => ({ name, w, pct: Math.round(s / 124 * 100) + '%' })),
+      famFont: famSize === 'Fit' ? 'calc(100cqw / ' + (0.6 * [...famText].length).toFixed(2) + ')' : famSize + 'px',
+      famSizes: ['13', '20', '40', 'Fit'].map(label => ({ label, pick: () => this.setState({ famSize: label }), bg: label === famSize ? '#F7F6FA' : '#0B0A0F', co: label === famSize ? '#0B0A0F' : '#A9A3B5' })),
+      waterfall: MW.map(([, w]) => ({ w })),
+    };
+    if (!this.pickEl) this.pickEl = React.createElement(this.PickPath);
+    if (!this.spinEl) this.spinEl = React.createElement(function AgentSpinner() {
+      const F = ['·', '✢', '✳', '✶', '✻', '✽', '✻', '✶', '✳', '✢'], [i, set] = React.useState(0);
+      React.useEffect(() => { const t = setInterval(() => set(n => (n + 1) % F.length), 120); return () => clearInterval(t); }, []);
+      return React.createElement('span', null, F[i]);
+    });
+    return {
+      ...inspector, ...family, pickPlate: this.pickEl, sel,
+      agentSpinner: this.spinEl, inspRef: this.inspRef, inspPos: this.state.inspTwo ? 'sticky' : 'static',
+      selCode: 'U+' + [...sel].map(c => c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')).join(' U+'),
+      glyphCount: window.CCMono ? window.CCMono.count() : 990,
+      cover: (window.CCMono ? window.CCMono.coverage : []).map(b => { const have = b.cps.filter(c => window.CCMono.glyphs[String.fromCharCode(c)]).length; return { name: b.name, have, total: b.cps.length, pct: Math.round(100 * have / b.cps.length) + '%' }; }),
+      coverTotal: (window.CCMono ? window.CCMono.coverage : []).reduce((a, b) => a + b.cps.length, 0),
+      blockCount: window.CCMono ? window.CCMono.coverage.length : 22,
+      vw: this.state.vw || 400,
+      onVw: e => this.setState({ vw: +e.target.value }),
+      testerText, testerSize,
+      maskText: this.state.maskText,
+      maskGroups: window.CCMask ? Object.entries(window.CCMask.PREFIXES).map(([cat, o]) => ({ cat, n: Object.keys(o).length, items: Object.entries(o).map(([name, ps]) => ({ name, n: ps.length, list: ps.join('  ') })) })) : [],
+      maskSummary: window.CCMask ? (c => c.prefixes + ' prefixes from ' + c.issuers + ' issuers, ' + c.contexts + ' contexts')(window.CCMask.count()) : '',
+      onMaskText: e => this.setState({ maskText: e.target.value }),
+      maskFeat: this.state.revealed ? "'ss02' 0" : "'ss02' 1",
+      revealLabel: this.state.revealed ? 'Showing keys' : 'Hold to reveal',
+      revealBg: this.state.revealed ? '#5B3BD1' : '#0B0A0F',
+      reveal: () => this.setState({ revealed: true }),
+      revealKey: e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); this.setState({ revealed: true }); } },
+      conceal: () => this.state.revealed && this.setState({ revealed: false }),
+      testerItalic: this.state.italic ? '1' : '0',
+      italicBg: this.state.italic ? '#5B3BD1' : '#15131B',
+      testerWeight: String(this.state.tw || 64),
+      onWeight: e => this.setState({ tw: +e.target.value }),
+      toggleItalic: () => this.setState(s => ({ italic: !s.italic })),
+      testerCols: Math.max(4, Math.floor(width / (0.6 * testerSize))),
+      testerRef: this.testerRef,
+      onText: e => this.setState({ testerText: e.target.value }),
+      onSize: e => this.setState({ testerSize: +e.target.value }),
+      ...this.dlVals(), ...this.tocVals(),
+      agentRef: this.agentRef, agentReplay: () => this.startAgent(),
+      ...Object.fromEntries([1, 2, 3, 4, 5, 6].map(i => ['a' + i, (this.state.ag ?? 6) >= i ? '1' : '0']))
+    };
+  }
+  ALTS = [
+    ['Italic forms', [['a', 'Single-storey a'], ['f', 'Descending f']], 'italic'],
+    ['Cyrillic italic', [['б', 'Cursive б'], ['г', 'Cursive г'], ['д', 'Cursive д'], ['и', 'Cursive и'], ['й', 'Cursive й'], ['п', 'Cursive п'], ['т', 'Cursive т'], ['ц', 'Cursive ц'], ['ш', 'Cursive ш'], ['щ', 'Cursive щ']], 'italic'],
+    ['Dotted zero · ss01', [['0', 'Dotted zero']], 'ss01 · zero']
+  ];
+  dlTermRef = React.createRef();
+  DL_GROUPS = [
+    ['Terminals', '', [
+      ['ghostty', 'Ghostty', '~/.config/ghostty/config', ['font-family = "CoCart Mono"', 'font-feature = ss02', 'font-size = 13'], 'CoCart Mono', '13', 'One line', 'Ghostty shapes text with HarfBuzz and takes OpenType features in its config.'],
+      ['kitty', 'kitty', '~/.config/kitty/kitty.conf', ['font_family      CoCart Mono', 'font_size        13.0', 'font_features    CoCartMono-Regular +ss02', 'font_features    CoCartMono-Bold +ss02'], 'CoCart Mono', '13', 'One line per style', 'kitty matches features by PostScript name. Add a line for each style you use.'],
+      ['wezterm', 'WezTerm', '~/.wezterm.lua', ['config.font = wezterm.font("CoCart Mono")', 'config.harfbuzz_features = { "ss02" }', 'config.font_size = 13.0'], 'CoCart Mono', '13', 'One line', 'WezTerm passes harfbuzz_features straight to the shaper.'],
+      ['rio', 'Rio', '~/.config/rio/config.toml', ['[fonts]', 'family = "CoCart Mono"', 'size = 16', 'features = ["ss02"]'], 'CoCart Mono', '16', 'One line', 'Rio does not live-reload font features. Close and reopen it after saving.'],
+      ['winterm', 'Windows Terminal', 'settings.json · profiles.defaults', ['"font": {', '  "face": "CoCart Mono",', '  "size": 13,', '  "features": { "ss02": 1 }', '}'], 'CoCart Mono', '13', 'One line', 'Install the static TTFs on Windows: they carry the hinting for ClearType.']
+    ]],
+    ['Terminals', 'need Masked', [
+      ['alacritty', 'Alacritty', '~/.config/alacritty/alacritty.toml', ['[font]', 'normal = { family = "CoCart Mono Masked" }', 'size = 13.0'], 'CoCart Mono Masked', '13', 'Use Masked', 'Alacritty has no setting for font features, so the masking has to live in the font.'],
+      ['iterm', 'iTerm2', 'Settings › Profiles › Text', ['Font            CoCart Mono Masked', 'Size            13', 'Use ligatures   on'], 'CoCart Mono Masked', '13', 'Use Masked', 'iTerm2 can turn ligatures on but cannot pick a stylistic set.'],
+      ['terminalapp', 'Terminal.app', 'Settings › Profiles › Text › Font', ['Font   CoCart Mono Masked Regular', 'Size   13'], 'CoCart Mono Masked', '13', 'Use Masked', 'Terminal.app draws text without OpenType features.'],
+      ['warp', 'Warp', 'Settings › Appearance › Text', ['Terminal font   CoCart Mono Masked', 'Font size       13'], 'CoCart Mono Masked', '13', 'Use Masked', 'Warp has no setting for font features, so the masking has to live in the font.']
+    ]],
+    ['Editors', '', [
+      ['vscode', 'VS Code', 'User/settings.json', ['"editor.fontFamily": "CoCart Mono",', '"editor.fontLigatures": "\'ss02\'",', '"editor.fontSize": 13,', '"terminal.integrated.fontFamily": "CoCart Mono Masked"'], 'CoCart Mono', '13', 'One line', 'fontLigatures takes any feature list. The built-in terminal ignores it, so point it at Masked.'],
+      ['cursor', 'Cursor', 'User/settings.json', ['"editor.fontFamily": "CoCart Mono",', '"editor.fontLigatures": "\'ss02\'",', '"editor.fontSize": 13,', '"terminal.integrated.fontFamily": "CoCart Mono Masked"'], 'CoCart Mono', '13', 'One line', 'Cursor reads the same settings as VS Code.'],
+      ['devin', 'Devin Desktop', 'User/settings.json', ['"editor.fontFamily": "CoCart Mono",', '"editor.fontLigatures": "\'ss02\'",', '"editor.fontSize": 13,', '"terminal.integrated.fontFamily": "CoCart Mono Masked"'], 'CoCart Mono', '13', 'One line', 'Devin Desktop, formerly Windsurf, reads the same settings as VS Code.'],
+      ['neovide', 'Neovide', '~/.config/neovide/config.toml', ['[font]', 'normal = ["CoCart Mono"]', 'size = 13', '', '[font.features]', '"CoCart Mono" = ["+ss02"]'], 'CoCart Mono', '13', 'One line', 'Neovide sets features per font family. Neovim in a terminal uses that terminal\'s font instead.'],
+      ['zed', 'Zed', '~/.config/zed/settings.json', ['"buffer_font_family": "CoCart Mono",', '"buffer_font_features": { "ss02": true },', '"buffer_font_size": 13,', '"terminal": { "font_features": { "ss02": true } }'], 'CoCart Mono', '13', 'One line', 'Zed takes features for the editor and its terminal separately.']
+    ]],
+    ['Editors', 'need Masked', [
+      ['jetbrains', 'JetBrains IDEs', 'Settings › Editor › Font', ['Font          CoCart Mono Masked', 'Size          13', 'Line height   1.2'], 'CoCart Mono Masked', '13', 'Use Masked', 'JetBrains IDEs offer ligatures on or off, not stylistic sets.'],
+      ['sublime', 'Sublime Text', 'Preferences.sublime-settings', ['"font_face": "CoCart Mono Masked",', '"font_size": 13'], 'CoCart Mono Masked', '13', 'Use Masked', 'Masked works in Sublime without any feature settings.'],
+      ['xcode', 'Xcode', 'Settings › Themes › Source Editor', ['Font   CoCart Mono Masked Regular', 'Size   13'], 'CoCart Mono Masked', '13', 'Use Masked', 'Xcode sets one font per syntax colour. Select them all to change them at once.']
+    ]],
+    ['Agent apps', 'need Masked', [
+      ['claude', 'Claude Desktop', 'Settings › Code appearance › Code font', ['Code font   CoCart Mono Masked'], 'CoCart Mono Masked', 'App default', 'Use Masked', 'Applies to code blocks and diffs. The Code tab\'s terminal still uses the system monospace, so run Claude Code in one of the terminals above to get CoCart Mono there.'],
+      ['codex', 'Codex', '~/.codex/config.toml', ['[desktop.appearanceDarkChromeTheme.fonts]', 'code = "CoCart Mono Masked"'], 'CoCart Mono Masked', '14', 'Use Masked', 'Or Settings › Appearance › Code font. Codex uses the code font for diffs and its built-in terminal.']
+    ]],
+    ['Web', '', [
+      ['web', 'The web', 'your stylesheet', ['<link rel="stylesheet" href="/fonts/cocart-mono.css">', '', 'code, pre, .sku { font-family: "CoCart Mono", monospace; }', '.secret { font-feature-settings: "ss02" 1; }'], 'CoCart Mono', 'any', 'One class', 'Mask only what holds keys. Never mask a storefront: prices and order numbers must stay readable.']
+    ]]
+  ];
+  startTerm() {
+    clearTimeout(this.tt); this.termStarted = true; const t0 = Date.now(); this.setState({ tms: 0 });
+    const tick = () => { const ms = Date.now() - t0; this.setState({ tms: ms }); this.tt = setTimeout(tick, ms < 5000 ? 70 : 265); };
+    clearTimeout(this.tt); this.tt = setTimeout(tick, 70);
+  }
+  watchTerm() {
+    clearInterval(this.twatch);
+    this.twatch = setInterval(() => {
+      if (this.termStarted) { clearInterval(this.twatch); return; }
+      const el = this.dlTermRef.current; if (!el) return;
+      const r = el.getBoundingClientRect(), h = window.innerHeight;
+      if (r.top < h * 0.8 && r.bottom > h * 0.2) { clearInterval(this.twatch); this.startTerm(); }
+    }, 250);
+  }
+  termVals() {
+    const ms = this.state.tms ?? 1e9, SPIN = '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏';
+    const rows = [['CoCart Mono', 6.3, 500, 2300], ['CoCart Mono Masked', 6.0, 2400, 4100]].map(([name, mb, a, b]) => {
+      const p = Math.max(0, Math.min(1, (ms - a) / (b - a))), done = ms >= b;
+      return { name, show: ms >= a ? '1' : '0', done, busy: !done, icon: done ? '✓' : SPIN[Math.floor(ms / 80) % 10], pct: Math.round(p * 100) + '%', got: (p * mb).toFixed(1) + ' MB of ' + mb + ' MB', size: mb + ' MB' };
+    });
+    const end = ms >= 4500, prompt = ms >= 4900;
+    return { t1: ms >= 150 ? '1' : '0', termRows: rows, tInstalled: end ? '1' : '0', tPrompt: prompt ? '1' : '0', cursorOn: !prompt || Math.floor(ms / 530) % 2 === 0 ? '1' : '0' };
+  }
+  mountToc() {
+    const secs = [...document.querySelectorAll('section[data-screen-label]')].filter(s => /^\d\d /.test(s.dataset.screenLabel));
+    secs.forEach(s => { if (!s.id) s.id = 's' + s.dataset.screenLabel.slice(0, 2); });
+    this.tocSecs = secs;
+    const toc = secs.map(s => { const l = s.dataset.screenLabel; return { n: l.slice(0, 2), name: l.slice(3), id: s.id }; });
+    const onScroll = () => {
+      let act = null; const y = window.innerHeight * 0.35;
+      for (const s of this.tocSecs) if (s.getBoundingClientRect().top <= y) act = s.id;
+      const w = window.innerWidth;
+      if (act !== this.state.tocAct || w !== this.state.vwW) this.setState({ tocAct: act, vwW: w });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll);
+    this.tocOff = () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); };
+    this.setState({ toc }); onScroll();
+  }
+  tocVals() {
+    const w = this.state.vwW || window.innerWidth, act = this.state.tocAct;
+    return {
+      tocShow: w >= 1360, tocWide: w >= 1640, tocPill: w < 1360, tocOpen: !!this.state.tocOpen,
+      toggleToc: () => this.setState(s => ({ tocOpen: !s.tocOpen })),
+      tocActLabel: ((this.state.toc || []).find(t => t.id === act) || { n: '', name: 'Contents' }),
+      toc: (this.state.toc || []).map(t => ({ ...t, co: t.id === act ? '#F7F6FA' : '#6B6578', bar: t.id === act ? '20px' : '8px', bg: t.id === act ? '#24212C' : 'transparent',
+        go: e => { e.preventDefault(); this.setState({ tocOpen: false }); const el = document.getElementById(t.id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth' }); } }))
+    };
+  }
+  agentRef = React.createRef();
+  startAgent() {
+    clearInterval(this.at); this.setState({ ag: 0 });
+    this.at = setInterval(() => this.setState(s => { if (s.ag >= 6) { clearInterval(this.at); return null; } return { ag: s.ag + 1 }; }), 650);
+  }
+  mountDl() {
+    this.mountToc();
+    const MIME = { woff2: 'font/woff2', otf: 'font/otf', ttf: 'font/ttf', zip: 'application/zip', css: 'text/css' };
+    this.onDlClick = async e => {
+      const a = e.target.closest && e.target.closest('a[download][href^="fonts/"]'); if (!a) return;
+      e.preventDefault(); e.stopPropagation();
+      const name = a.getAttribute('download'), ext = name.split('.').pop();
+      try {
+        const buf = await (await fetch(a.getAttribute('href'))).arrayBuffer();
+        const url = URL.createObjectURL(new Blob([buf], { type: MIME[ext] || 'application/octet-stream' }));
+        const t = document.createElement('a'); t.href = url; t.download = name; document.body.appendChild(t); t.click(); t.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 4000);
+      } catch (err) { window.open(a.href, '_blank'); }
+    };
+    document.addEventListener('click', this.onDlClick, true);
+    if (this.agentRef.current && window.IntersectionObserver) { this.aio = new IntersectionObserver(es => { if (es[0].isIntersecting) { this.aio.disconnect(); this.startAgent(); } }, { threshold: .5 }); this.aio.observe(this.agentRef.current); }
+    this.watchTerm();
+  }
+  WEB_TABS = [
+    ['npm', 'terminal, then your entry file', ['npm i @cocartheadless/mono', '# or: yarn add @cocartheadless/mono', '# or: pnpm add @cocartheadless/mono', '# or: bun add @cocartheadless/mono', '', 'import "@cocartheadless/mono/dist/cocart-mono.css";', '', '.price, .sku, .order-number {', '  font-family: "CoCart Mono", ui-monospace, monospace;', '}']],
+    ['CDN', '<head> · jsDelivr, nothing to install', ['<link rel="stylesheet"', '      href="https://cdn.jsdelivr.net/npm/@cocartheadless/mono@1/dist/cocart-mono.css">', '', '<style>', '  .price, .sku { font-family: "CoCart Mono", monospace; }', '</style>']],
+    ['HTML', '<head>', ['<link rel="preload" href="/fonts/CoCart-Mono-Regular.woff2"', '      as="font" type="font/woff2" crossorigin>', '<link rel="stylesheet" href="/fonts/cocart-mono.css">', '', '<style>', '  .price, .sku { font-family: "CoCart Mono", monospace; }', '  .coupon { font-feature-settings: "zero" 1; }', '</style>']],
+    ['@font-face', 'your stylesheet · variable, self-hosted', ['@font-face {', '  font-family: "CoCart Mono";', '  src: url("/fonts/CoCart-Mono-Variable.woff2") format("woff2");', '  font-weight: 100 900;', '  font-display: swap;', '}', '@font-face {', '  font-family: "CoCart Mono";', '  src: url("/fonts/CoCart-Mono-Variable-Italic.woff2") format("woff2");', '  font-weight: 100 900;', '  font-style: italic;', '  font-display: swap;', '}']],
+    ['Next.js', 'app/layout.tsx', ['import { cocartMono } from "@cocartheadless/mono/next";', '', 'export default function RootLayout({ children }) {', '  return (', '    <html lang="en" className={cocartMono.variable}>', '      <body>{children}</body>', '    </html>', '  );', '}', '', '/* globals.css */', '.price { font-family: var(--font-cocart-mono); }']]
+  ];
+  dlVals() {
+    const os = this.state.dlOs || 'win', appId = this.state.app || 'ghostty', term = this.state.term ?? 4;
+    let app;
+    const appGroups = this.DL_GROUPS.map(([name, note, items]) => ({ name, note, hasNote: !!note, n: items.length, items: items.map(a => { const on = a[0] === appId; if (on) app = a; return { name: a[1], co: on ? '#F7F6FA' : '#A9A3B5', bd: on ? '#B6A2FF' : '#24212C', icon: 'url("icons/apps/' + a[0] + '.svg")', pick: () => this.setState({ app: a[0] }) }; }) }));
+    const groupOf = this.DL_GROUPS.find(g => g[2].includes(app));
+    const tab = k => ({ co: os === k ? '#F7F6FA' : '#A9A3B5', bd: os === k ? '#B6A2FF' : 'transparent', pick: () => this.setState({ dlOs: k }) });
+    const copy = (key, text) => () => { if (!navigator.clipboard) return; navigator.clipboard.writeText(text).then(() => { this.setState({ dlCopied: key }); clearTimeout(this.dct); this.dct = setTimeout(() => this.setState({ dlCopied: null }), 1200); }, () => {}); };
+    const show = i => term >= i ? '1' : '0';
+    const wt = this.WEB_TABS.find(t => t[0] === this.state.webTab) || this.WEB_TABS[0];
+    return {
+      webTabs: this.WEB_TABS.map(([name]) => ({ name, co: name === wt[0] ? '#F7F6FA' : '#A9A3B5', bd: name === wt[0] ? '#B6A2FF' : 'transparent', pick: () => this.setState({ webTab: name }) })),
+      webFile: wt[1],
+      webLines: wt[2].map((t, i) => ({ n: i + 1, t: t || ' ', co: /^\s*(\/\*|\/\/|# )/.test(t) ? '#6B6578' : '#E4E1EA' })),
+      webCopy: copy('web', wt[2].join('\n')), webCopyLabel: this.state.dlCopied === 'web' ? 'Copied' : 'Copy',
+      tabMac: tab('mac'), tabWin: tab('win'), tabLinux: tab('linux'),
+      isMac: os === 'mac', isWin: os === 'win', isLinux: os === 'linux',
+      dlTermRef: this.dlTermRef, replay: () => this.startTerm(),
+      ...this.termVals(),
+      installCopy: copy('install', 'curl -fsSL https://cocart-headless.github.io/cocart-mono-font/install.sh | sh'), installCopyLabel: this.state.dlCopied === 'install' ? 'Copied' : 'Copy',
+      appGroups, appName: app[1], appIcon: 'url("icons/apps/' + app[0] + '.svg")', appKind: groupOf[0], appFile: app[2], appFont: app[4], appSize: app[5], appMask: app[6], appNote: app[7],
+      appMasked: app[4].includes('Masked'),
+      appLines: app[3].map((t, i) => ({ n: i + 1, t: t || ' ' })),
+      configCopy: copy('config', app[3].join('\n')), configCopyLabel: this.state.dlCopied === 'config' ? 'Copied' : 'Copy'
+    };
+  }
+}
+</script>
+</body>
+</html>

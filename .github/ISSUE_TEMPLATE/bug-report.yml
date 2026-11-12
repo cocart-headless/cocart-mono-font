@@ -1,0 +1,113 @@
+name: Glyph or rendering bug
+description: A character looks wrong, is missing, breaks the grid, or renders badly in an app.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. A screenshot and the exact text that shows the problem help most.
+        If key masking missed a key or masked normal text, use the **Key masking problem** form instead.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: What did you expect, and what do you see instead?
+      placeholder: The Bold italic "₾" sits higher than the digits next to it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Text that shows it
+      description: Paste the exact characters, so we can test with the same code points.
+      render: text
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in. Put CoCart Mono at a large size if you can.
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build
+      options:
+        - CoCart Mono
+        - CoCart Mono Masked
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Files
+      options:
+        - Variable TTF (ttf/variable)
+        - Static TTF (ttf/static or ttf/scripts)
+        - OTF
+        - WOFF2 / stylesheet on the web
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: style
+    attributes:
+      label: Weight and style
+      placeholder: SemiBold Italic, or wght 450
+    validations:
+      required: true
+
+  - type: dropdown
+    id: script
+    attributes:
+      label: Script
+      multiple: true
+      options:
+        - Latin
+        - Cyrillic
+        - Greek
+        - Thai
+        - Armenian
+        - Georgian
+        - Symbols (box drawing, blocks, Braille, currency, agent marks)
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Web browser
+    validations:
+      required: true
+
+  - type: input
+    id: app
+    attributes:
+      label: App and version
+      placeholder: VS Code 1.105, Windows Terminal 1.23, Chrome 142…
+    validations:
+      required: true
+
+  - type: input
+    id: size
+    attributes:
+      label: Font size
+      placeholder: 13px
+
+  - type: input
+    id: version
+    attributes:
+      label: CoCart Mono version
+      description: Shown in the zip name and on the release page.
+      placeholder: 1.0.0
+    validations:
+      required: true

@@ -1,0 +1,45 @@
+# Labels used by the issue forms, triage workflows and labeler.
+# Edit here and push to main; the "Sync labels" workflow applies the changes.
+
+# Type
+- { name: bug, color: "d73a4a", description: "A glyph, metric or file that's wrong" }
+- { name: masking, color: "7b57f0", description: "Key masking (ss02 / CoCart Mono Masked) missed a key or masked normal text" }
+- { name: glyph-request, color: "b6a2ff", description: "A new character, script or feature" }
+- { name: website, color: "1d76db", description: "The specimen site" }
+- { name: native review, color: "0e8a16", description: "A native reader's review of one language" }
+- { name: language, color: "006b75", description: "A letter or mark that looks wrong in one language" }
+- { name: question, color: "cc317c", description: "Usage question" }
+
+# Status
+- { name: needs-triage, color: "fbca04", description: "Waiting for a maintainer to look" }
+- { name: needs-info, color: "fef2c0", description: "Waiting on the reporter; goes stale after 14 days" }
+- { name: confirmed, color: "0e8a16", description: "Reproduced and accepted" }
+- { name: stale, color: "eeeeee", description: "No activity while waiting on the author" }
+- { name: duplicate, color: "cfd3d7", description: "Already reported" }
+- { name: wontfix, color: "ffffff", description: "Won't be changed" }
+- { name: good first issue, color: "7057ff", description: "A good place to start" }
+- { name: help wanted, color: "008672", description: "Contributions welcome" }
+- { name: skip-changelog, color: "c5def5", description: "Font change that doesn't need a CHANGELOG entry" }
+
+# Area (applied to pull requests by path)
+- { name: fonts, color: "5319e7", description: "Changes to fonts/" }
+- { name: site, color: "1d76db", description: "Changes to site/" }
+- { name: installer, color: "0052cc", description: "Changes to install.sh" }
+- { name: ci, color: "ededed", description: "Workflows and scripts" }
+- { name: docs, color: "0075ca", description: "README, CONTRIBUTING, CHANGELOG" }
+- { name: dependencies, color: "0366d6", description: "Dependency updates" }
+
+# Platform (from the issue form)
+- { name: "os: macos", color: "c2e0c6", description: "" }
+- { name: "os: windows", color: "c2e0c6", description: "" }
+- { name: "os: linux", color: "c2e0c6", description: "" }
+- { name: "os: web", color: "c2e0c6", description: "" }
+
+# Build and script (from the issue form)
+- { name: "build: masked", color: "d4c5f9", description: "CoCart Mono Masked" }
+- { name: "script: latin", color: "e4e1ea", description: "" }
+- { name: "script: cyrillic", color: "e4e1ea", description: "" }
+- { name: "script: greek", color: "e4e1ea", description: "" }
+- { name: "script: thai", color: "e4e1ea", description: "" }
+- { name: "script: armenian", color: "e4e1ea", description: "" }
+- { name: "script: georgian", color: "e4e1ea", description: "" }

@@ -1,0 +1,86 @@
+name: Issue triage
+
+# New issues get "needs-triage", plus platform and script labels read from the issue form.
+# When the author replies to an issue marked "needs-info", it goes back to "needs-triage".
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+
+jobs:
+  label-new:
+    name: Label new issue
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+
+            // Issue forms render each field as "### Label\n\nAnswer".
+            const answer = (heading) => {
+              const m = body.match(new RegExp(`###\\s+${heading}\\s*\\n+([\\s\\S]*?)(?=\\n###\\s|$)`, 'i'));
+              return m ? m[1].trim() : '';
+            };
+
+            const labels = new Set(['needs-triage']);
+
+            const platforms = { 'macOS': 'os: macos', 'Windows': 'os: windows', 'Linux': 'os: linux', 'Web browser': 'os: web' };
+            const platform = answer('Platform');
+            for (const [k, v] of Object.entries(platforms)) if (platform.includes(k)) labels.add(v);
+
+            const scripts = ['Latin', 'Cyrillic', 'Greek', 'Thai', 'Armenian', 'Georgian'];
+            const script = answer('Script');
+            for (const s of scripts) if (script.includes(s)) labels.add(`script: ${s.toLowerCase()}`);
+
+            if (answer('Build').includes('Masked')) labels.add('build: masked');
+
+            // The languages page opens pre-filled blank issues with a "Language:" line.
+            // Labels in a URL only stick for maintainers, so add them here.
+            const title = context.payload.issue.title || '';
+            if (/^Language:/m.test(body) && !body.includes('### ')) {
+              labels.add(title.startsWith('Language request:') ? 'glyph-request' : 'language');
+            }
+
+            // Native reviews: the language answer reads "Russian (Русский)". Label its script.
+            const reviewScripts = {
+              cyrillic: ['Russian', 'Ukrainian', 'Belarusian', 'Bulgarian', 'Serbian', 'Macedonian', 'Kazakh'],
+              greek: ['Greek'], thai: ['Thai'], armenian: ['Armenian'], georgian: ['Georgian'],
+            };
+            const language = answer('Language');
+            if (language && !language.startsWith('Other')) {
+              const name = language.split(' (')[0];
+              const found = Object.keys(reviewScripts).find((s) => reviewScripts[s].includes(name));
+              labels.add(`script: ${found || 'latin'}`);
+            }
+
+            await github.rest.issues.addLabels({
+              ...context.repo,
+              issue_number: context.issue.number,
+              labels: [...labels],
+            });
+
+  author-replied:
+    name: Author replied
+    if: >-
+      github.event_name == 'issue_comment' &&
+      !github.event.issue.pull_request &&
+      github.event.comment.user.login == github.event.issue.user.login &&
+      contains(github.event.issue.labels.*.name, 'needs-info')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.issues.removeLabel({
+              ...context.repo, issue_number: context.issue.number, name: 'needs-info',
+            });
+            await github.rest.issues.addLabels({
+              ...context.repo, issue_number: context.issue.number, labels: ['needs-triage'],
+            });

@@ -1,0 +1,57 @@
+name: Pull request triage
+
+# Labels PRs by the paths they touch, welcomes first-time contributors and explains
+# how font binary changes are handled.
+# pull_request_target runs with the base branch's code and never checks out the PR,
+# so it is safe for PRs from forks.
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  label:
+    name: Label by path
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v6
+
+  welcome:
+    name: Welcome and notes
+    if: github.event.action == 'opened'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const author = pr.user.login;
+            const notes = [];
+
+            const { data: prior } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:pr author:${author}`,
+              per_page: 2,
+            });
+            if (prior.total_count <= 1) {
+              notes.push(`Thanks for your first pull request to CoCart Mono, @${author}! The checks below run automatically, and a maintainer will review soon. [CONTRIBUTING.md](${pr.base.repo.html_url}/blob/${pr.base.ref}/CONTRIBUTING.md) explains how to run them locally.`);
+            }
+
+            const maintainer = ['OWNER', 'MEMBER', 'COLLABORATOR'].includes(pr.author_association);
+            if (!maintainer) {
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                ...context.repo, pull_number: pr.number, per_page: 100,
+              });
+              if (files.some(f => /^fonts\/.+\.(otf|ttf|woff2)$/.test(f.filename))) {
+                notes.push('This PR changes font binaries. The fonts are built from sources outside this repository, so binaries edited here can\'t be merged directly. If a glyph, metric or feature looks wrong, please describe it in an issue (with a screenshot and the text that shows it) and we\'ll fix it at the source.');
+              }
+            }
+
+            if (notes.length) {
+              await github.rest.issues.createComment({
+                ...context.repo, issue_number: pr.number, body: notes.join('\n\n'),
+              });
+            }

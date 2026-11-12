@@ -1,0 +1,14 @@
+# Normalise text to LF so install.sh runs under sh on every platform
+* text=auto eol=lf
+
+*.otf   binary
+*.ttf   binary
+*.woff2 binary
+*.png   binary
+*.pdf   binary
+*.zip   binary
+
+# Generated runtime and bundled data: keep them out of diffs and language stats
+site/support.js linguist-generated=true -diff
+site/doc-page.js linguist-generated=true -diff
+site/mono-languages.json linguist-generated=true

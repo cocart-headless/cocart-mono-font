@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoCart Mono · Languages</title>
+<meta name="description" content="Does CoCart Mono speak your language? 40 languages in six scripts, checked in every weight and style. Try your own text.">
+<link rel="canonical" href="https://cocart-headless.github.io/cocart-mono-font/languages.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CoCart">
+<meta property="og:title" content="CoCart Mono · Languages">
+<meta property="og:description" content="Does CoCart Mono speak your language? 40 languages in six scripts, checked in every weight and style. Try your own text.">
+<meta property="og:url" content="https://cocart-headless.github.io/cocart-mono-font/languages.html">
+<meta property="og:image" content="https://cocart-headless.github.io/cocart-mono-font/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CoCart Mono · Languages">
+<meta name="twitter:description" content="Does CoCart Mono speak your language? 40 languages in six scripts, checked in every weight and style. Try your own text.">
+<meta name="twitter:image" content="https://cocart-headless.github.io/cocart-mono-font/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 12 38 24'%3E%3Cpath fill='%23B6A2FF' fill-rule='evenodd' d='M5 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0ZM19 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0Z'/%3E%3C/svg%3E">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"></link>
+<link rel="stylesheet" href="fonts/css/cocart-mono.css?v=1.0.0"></link>
+<style>body{margin:0;background:#0B0A0F;color:#E4E1EA;-webkit-font-smoothing:antialiased}a{color:#B6A2FF}a:hover{color:#F7F6FA}::selection{background:#5B3BD1;color:#FFFFFF}textarea::placeholder,input::placeholder{color:#6E6879}</style>
+</helmet>
+<div style="min-height:100vh;background:#0B0A0F;color:#E4E1EA;font-family:'Instrument Sans',system-ui,sans-serif">
+<sc-if value="{{ tocShow }}" hint-placeholder-val="{{ false }}"><nav aria-label="Sections" style="position:fixed;left:clamp(16px,1.6vw,32px);top:50%;transform:translateY(-50%);z-index:15;display:flex;flex-direction:column;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase">
+<sc-for list="{{ toc }}" as="t" hint-placeholder-count="6"><a href="#{{ t.id }}" onClick="{{ t.go }}" style="display:flex;gap:10px;align-items:center;min-height:28px;color:{{ t.co }};text-decoration:none;transition:color .15s" style-hover="color:#B6A2FF"><span style="flex:none;width:{{ t.bar }};height:1px;background:currentColor;transition:width .2s"></span><span>{{ t.n }}</span><sc-if value="{{ tocWide }}" hint-placeholder-val="{{ false }}"><span style="white-space:nowrap">{{ t.name }}</span></sc-if></a></sc-for>
+</nav></sc-if>
+<sc-if value="{{ tocPill }}" hint-placeholder-val="{{ false }}"><div style="position:fixed;left:clamp(12px,2vw,24px);bottom:clamp(12px,2vw,24px);z-index:20;display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-family:'CoCart Mono',monospace">
+<sc-if value="{{ tocOpen }}" hint-placeholder-val="{{ false }}"><nav aria-label="Sections" style="display:flex;flex-direction:column;padding:6px;min-width:220px;max-height:min(70vh,520px);overflow-y:auto;background:#15131B;border:1px solid #2E2A36;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.4);font-size:13px;letter-spacing:.04em;text-transform:uppercase">
+<sc-for list="{{ toc }}" as="t" hint-placeholder-count="6"><a href="#{{ t.id }}" onClick="{{ t.go }}" style="display:flex;gap:12px;align-items:center;min-height:36px;padding:0 10px;border-radius:8px;background:{{ t.bg }};color:{{ t.co }};text-decoration:none" style-hover="color:#B6A2FF"><span style="color:#B6A2FF">{{ t.n }}</span><span>{{ t.name }}</span></a></sc-for>
+</nav></sc-if>
+<button onClick="{{ toggleToc }}" aria-expanded="{{ tocOpen }}" style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;border:1px solid #3A3546;background:#15131B;color:#F7F6FA;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.4)" style-hover="border-color:#7B57F0"><span style="color:#B6A2FF">☰</span><span>{{ tocActLabel.n }}</span><span>{{ tocActLabel.name }}</span></button>
+</div></sc-if>
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px)">
+
+<header data-screen-label="Header" style="display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#A9A3B5">
+<a href="https://cocartheadless.com" aria-label="CoCart" style="display:inline-flex;text-decoration:none"><span style="display:inline-flex;align-items:center;gap:8px;font:600 20px/1 'Figtree',sans-serif;letter-spacing:-.01em;text-transform:none;color:#FFFFFF"><svg viewBox="5 12 38 24" style="height:21px;width:auto;display:block;flex:none;color:#FFFFFF" aria-hidden="true"><path d="M5 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0ZM19 24a12 12 0 1 0 24 0a12 12 0 1 0-24 0Z" fill="currentColor" fill-rule="evenodd"></path></svg><span>CoCa<span style="margin-right:.035em">r</span>t</span></span></a>
+<nav style="display:flex;align-items:center;gap:20px;flex-wrap:wrap"><a href="index.html" style="color:#A9A3B5;text-decoration:none" style-hover="color:#F7F6FA">Specimen</a><span style="color:#F7F6FA">Languages</span><a href="index.html#download" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;background:#7B57F0;color:#FFFFFF;text-decoration:none" style-hover="background:#8E6DF5">Download ↓</a></nav>
+</header>
+
+<section data-screen-label="Hero" style="padding:clamp(48px,8vw,96px) 0 clamp(32px,5vw,56px);display:flex;flex-direction:column;gap:28px">
+<span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#B6A2FF">CoCart Mono · Languages</span>
+<h1 style="margin:0;font:500 clamp(36px,6vw,72px)/1.02 'Instrument Sans',sans-serif;letter-spacing:-.025em;color:#F7F6FA;max-width:14em;text-wrap:balance">Does CoCart Mono speak your language?</h1>
+<p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:#A9A3B5;max-width:38em;text-wrap:pretty">40 languages in six scripts, checked letter by letter in every weight and style. Pick yours to see what's covered, then try your own text.</p>
+<div style="position:relative;max-width:560px">
+<input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search a language, like Polski or ไทย" aria-label="Search a language" style="width:100%;box-sizing:border-box;min-height:56px;padding:0 20px;border-radius:14px;border:1px solid #2E2A36;background:#15131B;color:#F7F6FA;font:400 18px 'Instrument Sans',sans-serif;outline:none" style-focus="border-color:#7B57F0"></input>
+<sc-if value="{{ hasMatches }}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ matches }}" as="m" hint-placeholder-count="4"><button onClick="{{ m.pick }}" style="min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #2E2A36;background:#15131B;color:#F7F6FA;font:400 15px 'Instrument Sans',sans-serif;cursor:pointer;display:flex;gap:8px;align-items:center" style-hover="border-color:#7B57F0">{{ m.name }} <span style="font-family:'CoCart Mono',monospace;color:#A9A3B5">{{ m.native }}</span></button></sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ noMatches }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0;font-size:15px;color:#A9A3B5">Not on the list yet. <a href="{{ requestLang }}">Ask for it on GitHub ↗</a></p></sc-if>
+</div>
+</section>
+
+<section id="verdict" data-screen-label="01 Your language" style="scroll-margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1px;background:#24212C;border:1px solid #24212C;border-radius:20px;overflow:hidden">
+<div style="background:#0B0A0F;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:20px;min-width:0">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#A9A3B5">{{ L.script }}</span>
+<h2 style="margin:0;font:500 clamp(30px,4vw,44px)/1.1 'Instrument Sans',sans-serif;color:#F7F6FA">{{ L.name }} <span style="font-family:'CoCart Mono',monospace;font-weight:400;color:#A9A3B5">{{ L.native }}</span></h2>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-if value="{{ L.reviewed }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;background:oklch(0.8 0.14 155);color:#0B0A0F;font:500 14px 'Instrument Sans',sans-serif">✓ Supported · reviewed by a native reader</span></sc-if>
+<sc-if value="{{ L.supported }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid oklch(0.8 0.14 155);color:oklch(0.86 0.12 155);font:500 14px 'Instrument Sans',sans-serif">✓ Supported</span></sc-if>
+<sc-if value="{{ L.partial }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid oklch(0.84 0.13 85);color:oklch(0.88 0.11 85);font:500 14px 'Instrument Sans',sans-serif">Partial · {{ L.missCount }} missing</span></sc-if>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #24212C;font-size:15px;line-height:1.45">
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #24212C"><span style="color:#A9A3B5">Characters</span><span style="color:#F7F6FA;text-align:right">{{ L.countText }}</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #24212C"><span style="color:#A9A3B5">Styles</span><span style="color:#F7F6FA;text-align:right">{{ L.stylesText }}</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #24212C"><span style="color:#A9A3B5">CoCart Mono Masked</span><span style="color:#F7F6FA;text-align:right">{{ L.maskedText }}</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #24212C"><span style="color:#A9A3B5">Native review</span><span style="color:#F7F6FA;text-align:right">{{ L.reviewText }}</span></div>
+<sc-if value="{{ L.hasHistory }}" hint-placeholder-val="{{ false }}"><div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #24212C"><span style="color:#A9A3B5">Changes</span><span style="color:#F7F6FA;text-align:right">{{ L.historyText }}</span></div></sc-if>
+</div>
+<sc-if value="{{ L.partial }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:15px;line-height:1.5;color:#E4E1EA">Missing: <span style="font-family:'CoCart Mono',monospace;color:#F7F6FA">{{ L.missText }}</span></p></sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px">
+<sc-if value="{{ L.notReviewed }}" hint-placeholder-val="{{ true }}"><a href="{{ L.sheetUrl }}" style="color:#B6A2FF">Read {{ L.name }}? Review it</a></sc-if>
+<a href="{{ L.issueUrl }}" style="color:#A9A3B5" style-hover="color:#F7F6FA">Something looks wrong? ↗</a>
+</div>
+</div>
+<div style="background:#0B0A0F;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px;min-width:0">
+<div style="display:flex;flex-wrap:wrap;gap:4px">
+<sc-for list="{{ weights }}" as="w" hint-placeholder-count="4">
+<sc-if value="{{ w.active }}" hint-placeholder-val="{{ false }}"><button onClick="{{ w.onClick }}" style="min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #F7F6FA;background:#F7F6FA;color:#0B0A0F;font:500 13px 'CoCart Mono',monospace;cursor:pointer">{{ w.label }}</button></sc-if>
+<sc-if value="{{ w.idle }}" hint-placeholder-val="{{ true }}"><button onClick="{{ w.onClick }}" style="min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #2E2A36;background:transparent;color:#A9A3B5;font:400 13px 'CoCart Mono',monospace;cursor:pointer" style-hover="color:#F7F6FA">{{ w.label }}</button></sc-if>
+</sc-for>
+</div>
+<div style="font-family:'CoCart Mono',monospace;font-size:clamp(26px,3vw,36px);line-height:1.5;color:#F7F6FA;overflow-wrap:anywhere;font-weight:{{ wt }};font-style:{{ fst }}">{{ L.letters }}</div>
+<div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #24212C;padding-top:14px">
+<sc-for list="{{ sizes }}" as="z" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:baseline"><span style="font:400 13px 'CoCart Mono',monospace;color:#6E6879">{{ z.label }}</span><span style="font-family:'CoCart Mono',monospace;line-height:1.5;color:#E4E1EA;overflow-wrap:anywhere;font-size:{{ z.px }};font-weight:{{ wt }}">{{ L.letters }}</span></div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="try" data-screen-label="02 Try your text" style="padding:clamp(56px,8vw,96px) 0 0;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.08em;color:#B6A2FF">02</span><h2 style="margin:0;font:500 clamp(26px,3vw,36px)/1.15 'Instrument Sans',sans-serif;color:#F7F6FA">Try your own text</h2><p style="margin:0;font-size:16px;line-height:1.55;color:#A9A3B5;max-width:40em;text-wrap:pretty">Paste a product name, an address or a sentence. Anything CoCart Mono can't draw is highlighted, so you'll know before you ship.</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px">
+<textarea value="{{ text }}" onChange="{{ onText }}" rows="6" placeholder="Type or paste text in any language" aria-label="Your text" style="box-sizing:border-box;width:100%;min-height:200px;padding:18px 20px;border-radius:14px;border:1px solid #2E2A36;background:#15131B;color:#F7F6FA;font:400 17px/1.55 'Instrument Sans',sans-serif;resize:vertical;outline:none" style-focus="border-color:#7B57F0"></textarea>
+<div style="border:1px solid #24212C;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="font-family:'CoCart Mono','Times New Roman',serif;font-size:24px;line-height:1.6;color:#F7F6FA;white-space:pre-wrap;overflow-wrap:anywhere;min-height:3em;font-weight:{{ wt }}"><sc-for list="{{ segs }}" as="s" hint-placeholder-count="1"><sc-if value="{{ s.ok }}" hint-placeholder-val="{{ true }}"><span>{{ s.t }}</span></sc-if><sc-if value="{{ s.bad }}" hint-placeholder-val="{{ false }}"><span style="background:oklch(0.42 0.12 25);color:#FFFFFF;border-radius:4px;box-shadow:0 0 0 2px oklch(0.42 0.12 25)">{{ s.t }}</span></sc-if></sc-for></div>
+<div style="border-top:1px solid #24212C;padding-top:12px;font:400 14px/1.5 'CoCart Mono',monospace">
+<sc-if value="{{ testOk }}" hint-placeholder-val="{{ true }}"><span style="color:oklch(0.82 0.13 155)">✓ {{ testText }}</span></sc-if>
+<sc-if value="{{ testBad }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:6px"><span style="color:oklch(0.8 0.14 25)">{{ testText }}</span><span style="color:#E4E1EA;overflow-wrap:anywhere">{{ testMissing }}</span><a href="{{ testIssue }}" style="color:#B6A2FF;font-family:'Instrument Sans',sans-serif;font-size:15px">Ask us to add them ↗</a></div></sc-if>
+</div>
+</div>
+</div>
+</section>
+
+<section id="all" data-screen-label="03 All languages" style="padding:clamp(56px,8vw,96px) 0 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.08em;color:#B6A2FF">03</span><h2 style="margin:0;font:500 clamp(26px,3vw,36px)/1.15 'Instrument Sans',sans-serif;color:#F7F6FA">Every language we check</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:#A9A3B5"><span style="display:inline-flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:oklch(0.8 0.14 155)"></span>Supported, reviewed by a native reader</span><span style="display:inline-flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;border:1.5px solid oklch(0.8 0.14 155);box-sizing:border-box"></span>Supported</span><span style="display:inline-flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;border:1.5px solid oklch(0.84 0.13 85);box-sizing:border-box"></span>Partial</span></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px 40px">
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #24212C;padding-bottom:8px"><h3 style="margin:0;font:500 18px 'Instrument Sans',sans-serif;color:#F7F6FA">{{ g.script }}</h3><span style="font:400 13px 'CoCart Mono',monospace;color:#A9A3B5">{{ g.count }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ g.langs }}" as="l" hint-placeholder-count="5">
+<sc-if value="{{ l.active }}" hint-placeholder-val="{{ false }}"><button onClick="{{ l.pick }}" style="min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #F7F6FA;background:#F7F6FA;color:#0B0A0F;font:500 14px 'Instrument Sans',sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px">{{ l.name }}</button></sc-if>
+<sc-if value="{{ l.idle }}" hint-placeholder-val="{{ true }}"><button onClick="{{ l.pick }}" style="min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #2E2A36;background:transparent;color:#E4E1EA;font:400 14px 'Instrument Sans',sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px" style-hover="border-color:#A9A3B5">
+<sc-if value="{{ l.reviewed }}" hint-placeholder-val="{{ false }}"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.8 0.14 155)"></span></sc-if>
+<sc-if value="{{ l.supported }}" hint-placeholder-val="{{ true }}"><span style="width:8px;height:8px;border-radius:50%;border:1.5px solid oklch(0.8 0.14 155);box-sizing:border-box"></span></sc-if>
+<sc-if value="{{ l.partial }}" hint-placeholder-val="{{ false }}"><span style="width:8px;height:8px;border-radius:50%;border:1.5px solid oklch(0.84 0.13 85);box-sizing:border-box"></span></sc-if>
+{{ l.name }}</button></sc-if>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<p style="margin:0;font-size:15px;color:#A9A3B5">Need a language that isn't here? <a href="{{ requestLang }}">Ask for it on GitHub ↗</a></p>
+</section>
+
+<section id="checks" data-screen-label="04 How we check" style="padding:clamp(56px,8vw,96px) 0 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.08em;color:#B6A2FF">04</span><h2 style="margin:0;font:500 clamp(26px,3vw,36px)/1.15 'Instrument Sans',sans-serif;color:#F7F6FA">How we check</h2><p style="margin:0;font-size:16px;line-height:1.55;color:#A9A3B5;max-width:42em;text-wrap:pretty">Every release runs the same tests on every font file we ship. {{ checkedText }}</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+<div style="background:#15131B;border:1px solid #24212C;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:500 16px 'Instrument Sans',sans-serif;color:#F7F6FA">Every character, every style</span><span style="font-size:15px;line-height:1.5;color:#A9A3B5">Each language's letters, capitals, quotation marks and currency sign, in all nine weights, their italics and the variable fonts.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:500 16px 'Instrument Sans',sans-serif;color:#F7F6FA">Stays on the grid</span><span style="font-size:15px;line-height:1.5;color:#A9A3B5">Accents and vowel marks must not take up a cell of their own, so prices and order numbers still line up in columns.</span></div>
+<div style="background:#15131B;border:1px solid #24212C;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:500 16px 'Instrument Sans',sans-serif;color:#F7F6FA">Nothing gets cut off</span><span style="font-size:15px;line-height:1.5;color:#A9A3B5">Tall accents and deep descenders must stay inside what Windows will draw, and we note anything that reaches past the default line height on macOS.</span></div>
+</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #24212C;font-size:15px">
+<div style="display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:12px;padding:10px 0;border-bottom:1px solid #24212C;font:400 13px 'CoCart Mono',monospace;letter-spacing:.04em;text-transform:uppercase;color:#A9A3B5"><span>Script</span><span>On the grid</span><span>Windows</span><span>macOS</span></div>
+<sc-for list="{{ scriptRows }}" as="s" hint-placeholder-count="6">
+<div style="display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 0;border-bottom:1px solid #24212C;font-family:'CoCart Mono',monospace;font-size:14px;align-items:baseline"><span style="font-family:'Instrument Sans',sans-serif;font-size:15px;color:#F7F6FA">{{ s.script }}</span>
+<sc-if value="{{ s.wOk }}" hint-placeholder-val="{{ true }}"><span style="color:oklch(0.82 0.13 155)">✓ {{ s.w }}</span></sc-if><sc-if value="{{ s.wBad }}" hint-placeholder-val="{{ false }}"><span style="color:oklch(0.8 0.14 25)">{{ s.w }}</span></sc-if>
+<sc-if value="{{ s.iOk }}" hint-placeholder-val="{{ true }}"><span style="color:oklch(0.82 0.13 155)">✓ {{ s.i }}</span></sc-if><sc-if value="{{ s.iBad }}" hint-placeholder-val="{{ false }}"><span style="color:oklch(0.8 0.14 25)">{{ s.i }}</span></sc-if>
+<sc-if value="{{ s.mOk }}" hint-placeholder-val="{{ true }}"><span style="color:oklch(0.82 0.13 155)">✓ {{ s.m }}</span></sc-if><sc-if value="{{ s.mNote }}" hint-placeholder-val="{{ false }}"><span style="color:oklch(0.88 0.11 85)">{{ s.m }} · note</span></sc-if>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{ hasNotes }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:52em">
+<h3 style="margin:0;font:500 18px 'Instrument Sans',sans-serif;color:#F7F6FA">Notes for macOS</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Nothing is cut off. These marks reach a little past the default line height, so with <code style="font-family:'CoCart Mono',monospace;color:#E4E1EA">line-height</code> below 1.25 they can touch the line above or below. Most fonts behave the same way with these letters.</p>
+<sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
+<div style="display:grid;grid-template-columns:minmax(0,10em) minmax(0,1fr);gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid #24212C"><span style="font-family:'CoCart Mono',monospace;font-size:24px;line-height:1.5;color:#F7F6FA">{{ n.t }}</span><span style="font-size:15px;line-height:1.5;color:#E4E1EA">{{ n.text }}</span></div>
+</sc-for>
+</div>
+</sc-if>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#A9A3B5;max-width:46em">{{ lineText }}</p>
+</section>
+
+<section id="history" data-screen-label="05 Changes" style="padding:clamp(56px,8vw,96px) 0 0;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:400 13px 'CoCart Mono',monospace;letter-spacing:.08em;color:#B6A2FF">05</span><h2 style="margin:0;font:500 clamp(26px,3vw,36px)/1.15 'Instrument Sans',sans-serif;color:#F7F6FA">Language changes</h2></div>
+<div style="display:flex;flex-direction:column;border-top:1px solid #24212C">
+<sc-for list="{{ history }}" as="h" hint-placeholder-count="2">
+<div style="display:grid;grid-template-columns:minmax(0,12em) minmax(0,1fr);gap:8px 24px;padding:16px 0;border-bottom:1px solid #24212C">
+<div style="display:flex;flex-direction:column;gap:2px;font-family:'CoCart Mono',monospace"><span style="font-size:18px;color:#F7F6FA">{{ h.v }}</span><span style="font-size:13px;color:#A9A3B5">{{ h.date }}</span></div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ h.items }}" as="i" hint-placeholder-count="2"><div style="font-size:15px;line-height:1.5;color:#E4E1EA"><sc-if value="{{ i.hasLang }}" hint-placeholder-val="{{ false }}"><button onClick="{{ i.pick }}" style="padding:0;border:0;background:none;color:#B6A2FF;font:500 15px 'Instrument Sans',sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:3px">{{ i.lang }}</button>: </sc-if>{{ i.text }}</div></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="review" data-screen-label="06 Help us review" style="margin:clamp(56px,8vw,96px) 0 0;padding:clamp(28px,4vw,48px);border-radius:20px;background:#15131B;border:1px solid #24212C;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px 48px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font:500 clamp(24px,3vw,32px)/1.15 'Instrument Sans',sans-serif;color:#F7F6FA">Read one of these every day?</h2>
+<p style="margin:0;font-size:16px;line-height:1.55;color:#A9A3B5;text-wrap:pretty">Tests tell us a letter exists and fits. Only a native reader can tell us it looks right. Download the fillable PDF for your language, fill it in, and send it to <a href="mailto:hello@cocartheadless.com">hello@cocartheadless.com</a> or attach it to a GitHub issue. It takes about fifteen minutes. Reviews aren't credited by name; if your review leads to a fix and you'd like credit, say so and you'll be listed in the release notes.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<span style="font:400 14px 'CoCart Mono',monospace;color:#A9A3B5">{{ reviewWanted }}</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="{{ L.pdfUrl }}" download="" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#7B57F0;color:#FFFFFF;text-decoration:none;font-size:15px" style-hover="background:#8E6DF5">{{ L.pdfLabel }}</a>
+<a href="{{ L.sheetUrl }}" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #2E2A36;color:#F7F6FA;text-decoration:none;font-size:15px" style-hover="border-color:#A9A3B5">Open it in the browser</a>
+<a href="{{ L.reviewIssueUrl }}" style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #2E2A36;color:#F7F6FA;text-decoration:none;font-size:15px" style-hover="border-color:#A9A3B5">Send on GitHub ↗</a>
+</div>
+</div>
+</section>
+
+<footer data-screen-label="Footer" style="margin-top:clamp(56px,8vw,96px);padding:clamp(40px,6vw,64px) 0 40px;border-top:1px solid #24212C;display:flex;flex-direction:column;gap:40px;font-size:14px;line-height:1.5">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:16px;color:#F7F6FA">CoCart Mono 1.0.0</span><span style="color:#A9A3B5;text-wrap:pretty">A monospaced typeface for storefronts, carts and command lines.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Licence</span><span style="color:#E4E1EA">SIL Open Font License 1.1</span><a href="https://openfontlicense.org" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Read the licence ↗</a></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Project</span><a href="https://github.com/cocart-headless/cocart-mono-font" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">GitHub ↗</a><a href="https://github.com/cocart-headless/cocart-mono-font/issues" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Report an issue ↗</a></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'CoCart Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#A9A3B5">Get it</span><a href="index.html#download" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Download</a><a href="index.html" style="color:#E4E1EA;text-decoration:none" style-hover="color:#B6A2FF">Specimen</a></div>
+</div>
+<div style="font-family:'CoCart Mono',monospace;font-size:13px;color:#A9A3B5">© 2026 CoCart Headless</div>
+</footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { data: null, sel: null, query: '', text: null, wt: 400 };
+  GH = 'https://github.com/cocart-headless/cocart-mono-font/issues/new';
+  componentDidMount() {
+    setTimeout(() => this.mountToc(), 0);
+    fetch('mono-languages.json').then(r => r.json()).then(data => {
+      this.setState({ data, sel: 'fr' });
+    }).catch(() => {});
+  }
+  componentWillUnmount() { this.tocOff && this.tocOff(); }
+  mountToc() {
+    const secs = [...document.querySelectorAll('section[data-screen-label]')].filter(s => /^\d\d /.test(s.dataset.screenLabel));
+    secs.forEach(s => { if (!s.id) s.id = 's' + s.dataset.screenLabel.slice(0, 2); });
+    this.tocSecs = secs;
+    const toc = secs.map(s => { const l = s.dataset.screenLabel; return { n: l.slice(0, 2), name: l.slice(3), id: s.id }; });
+    const onScroll = () => {
+      let act = null; const y = window.innerHeight * 0.35;
+      for (const s of this.tocSecs) if (s.getBoundingClientRect().top <= y) act = s.id;
+      const w = window.innerWidth;
+      if (act !== this.state.tocAct || w !== this.state.vwW) this.setState({ tocAct: act, vwW: w });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll);
+    this.tocOff = () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); };
+    this.setState({ toc }); onScroll();
+  }
+  tocVals() {
+    const w = this.state.vwW || window.innerWidth, act = this.state.tocAct;
+    return {
+      tocShow: w >= 1360, tocWide: w >= 1640, tocPill: w < 1360, tocOpen: !!this.state.tocOpen,
+      toggleToc: () => this.setState(s => ({ tocOpen: !s.tocOpen })),
+      tocActLabel: ((this.state.toc || []).find(t => t.id === act) || { n: '', name: 'Contents' }),
+      toc: (this.state.toc || []).map(t => ({ ...t, co: t.id === act ? '#F7F6FA' : '#6B6578', bar: t.id === act ? '20px' : '8px', bg: t.id === act ? '#24212C' : 'transparent',
+        go: e => { e.preventDefault(); this.setState({ tocOpen: false }); const el = document.getElementById(t.id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 16, behavior: 'smooth' }); } }))
+    };
+  }
+  issue(title, body, label) { return this.GH + '?title=' + encodeURIComponent(title) + '&labels=' + encodeURIComponent(label) + '&body=' + encodeURIComponent(body); }
+  has(cp) { const R = this.state.data ? this.state.data.ranges : []; let lo = 0, hi = R.length - 1; while (lo <= hi) { const m = (lo + hi) >> 1; if (cp < R[m][0]) hi = m - 1; else if (cp > R[m][1]) lo = m + 1; else return true; } return false; }
+  pick(id) { this.setState({ sel: id, query: '', text: null }); const el = document.getElementById('verdict'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 24, behavior: 'smooth' }); }
+  date(s) { const d = new Date(s + 'T12:00:00'); return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); }
+  renderVals() {
+    const D = this.state.data, langs = D ? D.languages : [], rev = D ? D.reviewed || {} : {};
+    const byId = Object.fromEntries(langs.map(l => [l.id, l]));
+    const status = l => l.missing ? 'partial' : rev[l.id] ? 'reviewed' : 'supported';
+    const l = byId[this.state.sel] || langs[0] || { id: '', name: 'Loading…', native: '', script: '', count: 0, chars: '', missing: '', masked: 'full' };
+    const st = l.id ? status(l) : 'supported', styles = D ? D.styles : 20;
+    const hist = D ? D.history.flatMap(h => h.items.filter(i => i.lang === l.id).map(i => i.text + ' in ' + h.v)) : [];
+    const isMark = c => /[\p{Mn}\p{Me}]/u.test(c);
+    const letters = [...(l.chars || '')].filter(c => !/\s/.test(c)).map(c => (isMark(c) ? '\u25CC' : '') + c).join(' ');
+    const L = {
+      name: l.name, native: l.native, script: l.script,
+      reviewed: st === 'reviewed', supported: st === 'supported', partial: st === 'partial', notReviewed: st !== 'reviewed',
+      missCount: [...(l.missing || '')].length, missText: [...(l.missing || '')].map(c => c + ' U+' + c.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')).join(' · '),
+      countText: l.count ? (st === 'partial' ? (l.count - [...l.missing].length) + ' of ' + l.count : 'All ' + l.count) + ' letters, quotes and currency signs' : '…',
+      stylesText: st === 'partial' ? 'Gaps in some styles' : 'All ' + styles + ': nine weights, italics, variable',
+      maskedText: l.masked === 'full' ? 'Fully supported' : l.masked === 'variable' ? 'Variable fonts only' : l.masked === 'static' ? 'Static fonts only' : 'Partly supported',
+      reviewText: rev[l.id] ? 'Reviewed by a native reader' : 'Not reviewed yet',
+      hasHistory: !!hist.length, historyText: hist.join(' · '),
+      letters,
+      sheetUrl: 'review.html?lang=' + l.id,
+      sheetLabel: 'Get the ' + l.name + ' review sheet',
+      pdfUrl: 'review-sheets/CoCart-Mono-Review-' + l.name.replace(/\s+/g, '-') + '.pdf', pdfLabel: 'Download the ' + l.name + ' PDF',
+      reviewIssueUrl: this.GH + '?template=native-review.yml&labels=native+review&title=' + encodeURIComponent('Native review: ' + l.name),
+      mailUrl: 'mailto:hello@cocartheadless.com?subject=' + encodeURIComponent('CoCart Mono review: ' + l.name),
+      reviewUrl: this.issue('Native review: ' + l.name, 'I read ' + l.name + ' (' + l.native + ') and can review CoCart Mono.\n\nPlease send me the review sheet.', 'native review'),
+      issueUrl: this.issue(l.name + ': ', 'Language: ' + l.name + ' (' + l.native + ')\nCharacter(s): \nWeight and style: \nWhat looks wrong: \n\nCoCart Mono ' + (D ? D.version : ''), 'language')
+    };
+    const q = this.state.query.trim().toLowerCase();
+    const matches = q ? langs.filter(x => (x.name + ' ' + x.native + ' ' + x.id).toLowerCase().includes(q)).slice(0, 8).map(x => ({ name: x.name, native: x.native, pick: () => this.pick(x.id) })) : [];
+    const text = this.state.text != null ? this.state.text : letters.replace(/\u25CC/g, '').replace(/ /g, '');
+    const segs = [], missing = new Map();
+    for (const ch of text) {
+      const cp = ch.codePointAt(0), ok = /\s/.test(ch) || cp < 32 || cp === 0x200D || cp === 0x200C || this.has(cp);
+      if (!ok) missing.set(ch, cp);
+      const last = segs[segs.length - 1];
+      if (last && last.ok === ok) last.t += ch; else segs.push({ t: ch, ok, bad: !ok });
+    }
+    const uniq = [...new Set([...text].filter(c => !/\s/.test(c)))].length;
+    const miss = [...missing.entries()];
+    const scriptOrder = ['Latin', 'Cyrillic', 'Greek', 'Thai', 'Armenian', 'Georgian'];
+    const groups = scriptOrder.map(s => { const ls = langs.filter(x => x.script === s); return { script: s, count: ls.length + (ls.length === 1 ? ' language' : ' languages'), langs: ls.map(x => { const t = status(x); return { name: x.name, active: x.id === l.id, idle: x.id !== l.id, reviewed: t === 'reviewed', supported: t === 'supported', partial: t === 'partial', pick: () => this.pick(x.id) }; }) }; }).filter(g => g.langs.length);
+    const scriptRows = (D ? D.scripts : []).map(s => ({ script: s.script, w: s.width + '/' + s.total, wOk: s.width === s.total, wBad: s.width !== s.total, i: s.win + '/' + s.total, iOk: s.win === s.total, iBad: s.win !== s.total, m: s.mac + '/' + s.total, mOk: s.mac === s.total, mNote: s.mac !== s.total }));
+    const notes = (D ? D.scripts : []).flatMap(s => s.macNotes.map(n => ({ t: n.t, text: n.name + (n.up ? ': at most ' + (n.up / 1000).toFixed(3).replace(/^0/, '') + ' em above the line' : '') + (n.down ? ': at most ' + (n.down / 1000).toFixed(3).replace(/^0/, '') + ' em below the line' : '') + ', across all weights.' })));
+    const weights = [[200, 'Light'], [400, 'Regular'], [700, 'Bold'], [900, 'Black']].map(([w, label]) => ({ label, active: this.state.wt === w, idle: this.state.wt !== w, onClick: () => this.setState({ wt: w }) }));
+    const notRev = langs.filter(x => !rev[x.id]);
+    return {
+      ...this.tocVals(), L, wt: this.state.wt, fst: 'normal', weights,
+      sizes: [{ label: '10px', px: '10px' }, { label: '12px', px: '12px' }, { label: '16px', px: '16px' }, { label: '28px', px: '28px' }],
+      query: this.state.query, onQuery: e => this.setState({ query: e.target.value }),
+      hasMatches: !!matches.length, noMatches: !!q && !matches.length, matches,
+      requestLang: this.issue('Language request: ' + (this.state.query || ''), 'Language: ' + (this.state.query || '') + '\nScript: \nWhere you would use it: ', 'language request'),
+      text, onText: e => this.setState({ text: e.target.value }), segs,
+      testOk: !miss.length, testBad: !!miss.length,
+      testText: miss.length ? miss.length + ' of ' + uniq + ' characters not in CoCart Mono yet' : (uniq ? 'All ' + uniq + ' characters supported' : 'Type something to check it'),
+      testMissing: miss.map(([c, cp]) => c + ' U+' + cp.toString(16).toUpperCase().padStart(4, '0')).join(' · '),
+      testIssue: this.issue('Missing characters: ' + miss.map(([c]) => c).join(' '), 'Characters: ' + miss.map(([c, cp]) => c + ' (U+' + cp.toString(16).toUpperCase().padStart(4, '0') + ')').join(', ') + '\nLanguage: \nSample text: ' + text.slice(0, 200), 'language'),
+      groups, scriptRows, notes, hasNotes: !!notes.length,
+      checkedText: D ? 'Last checked ' + this.date(D.checked) + ' against CoCart Mono ' + D.version + ': ' + D.files + ' font files, ' + D.styles + ' styles.' : '',
+      lineText: D ? (D.lineHeightMatch ? 'Line height is the same on macOS and Windows in every file, ' + D.lineHeight + '× the font size, so a block of text is the same height on both.' : 'Line height differs between macOS and Windows in some files.') : '',
+      history: (D ? D.history : []).map(h => ({ v: h.v, date: this.date(h.date), items: h.items.map(i => ({ text: i.text, hasLang: !!i.lang, lang: i.lang && byId[i.lang] ? byId[i.lang].name : '', pick: () => i.lang && this.pick(i.lang) })) })),
+      reviewWanted: notRev.length === langs.length ? 'Wanted: native readers for all ' + langs.length + ' languages' : 'Still wanted: ' + notRev.length + ' of ' + langs.length + ' languages',
+      reviewIssue: this.issue('Native review volunteer', 'Language(s) I read: \nHow to reach me: ', 'native review')
+    };
+  }
+}
+</script>
+</body>
+</html>

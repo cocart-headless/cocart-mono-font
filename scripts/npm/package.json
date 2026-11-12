@@ -1,0 +1,62 @@
+{
+  "name": "@cocartheadless/mono",
+  "version": "0.0.0",
+  "description": "CoCart Mono, a free monospaced typeface for storefronts, carts and command lines: WOFF2 files, @font-face stylesheets and a next/font loader.",
+  "keywords": [
+    "font",
+    "typeface",
+    "monospace",
+    "monospaced",
+    "coding-font",
+    "variable-font",
+    "woff2",
+    "font-face",
+    "next-font",
+    "cocart"
+  ],
+  "homepage": "https://cocart-headless.github.io/cocart-mono-font/",
+  "bugs": {
+    "url": "https://github.com/cocart-headless/cocart-mono-font/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocart-headless/cocart-mono-font.git"
+  },
+  "license": "OFL-1.1",
+  "author": "CoCart (https://cocartheadless.com)",
+  "main": "dist/cocart-mono.css",
+  "style": "dist/cocart-mono.css",
+  "jsdelivr": "dist/cocart-mono.css",
+  "unpkg": "dist/cocart-mono.css",
+  "exports": {
+    ".": "./dist/cocart-mono.css",
+    "./variable.css": "./dist/cocart-mono-variable.css",
+    "./masked.css": "./dist/cocart-mono-masked.css",
+    "./next": {
+      "types": "./next.d.ts",
+      "default": "./next.mjs"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "next.mjs",
+    "next.d.ts",
+    "OFL.txt"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "peerDependencies": {
+    "next": ">=13.2"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

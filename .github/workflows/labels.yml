@@ -1,0 +1,40 @@
+name: Sync labels
+
+# Creates or updates the labels listed in .github/labels.yml. Labels not in the file are left alone.
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/labels.yml", ".github/workflows/labels.yml"]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Create or update labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pip install --quiet pyyaml
+          python - <<'EOF'
+          import subprocess, yaml
+          for label in yaml.safe_load(open(".github/labels.yml", encoding="utf-8")):
+              subprocess.run(
+                  ["gh", "label", "create", label["name"],
+                   "--color", str(label["color"]).lstrip("#"),
+                   "--description", label.get("description", ""),
+                   "--force"],
+                  check=True,
+              )
+              print("✓", label["name"])
+          EOF

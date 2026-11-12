@@ -1,0 +1,107 @@
+name: Native review
+description: Review CoCart Mono in a language you read every day.
+title: "Native review: "
+labels: ["native review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking our letters. Download your language's review sheet from https://cocart-headless.github.io/cocart-mono-font/languages.html, fill it in, then either attach the PDF below or copy your answers into this form. You don't need design knowledge — read it as you would a receipt or a shop page.
+
+        Reviews aren't credited by name. If your review leads to a fix and you'd like credit, say so in the issue and you'll be listed in the release notes.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - French (Français)
+        - German (Deutsch)
+        - Spanish (Español)
+        - Portuguese (Português)
+        - Italian (Italiano)
+        - Catalan (Català)
+        - Dutch (Nederlands)
+        - Danish (Dansk)
+        - Norwegian (Norsk)
+        - Swedish (Svenska)
+        - Finnish (Suomi)
+        - Icelandic (Íslenska)
+        - Polish (Polski)
+        - Czech (Čeština)
+        - Slovak (Slovenčina)
+        - Hungarian (Magyar)
+        - Romanian (Română)
+        - Turkish (Türkçe)
+        - Azerbaijani (Azərbaycanca)
+        - Croatian (Hrvatski)
+        - Slovenian (Slovenščina)
+        - Albanian (Shqip)
+        - Lithuanian (Lietuvių)
+        - Latvian (Latviešu)
+        - Estonian (Eesti)
+        - Welsh (Cymraeg)
+        - Esperanto (Esperanto)
+        - Uzbek (Oʻzbekcha)
+        - Vietnamese (Tiếng Việt)
+        - Russian (Русский)
+        - Ukrainian (Українська)
+        - Belarusian (Беларуская)
+        - Bulgarian (Български)
+        - Serbian (Српски)
+        - Macedonian (Македонски)
+        - Kazakh (Қазақша)
+        - Greek (Ελληνικά)
+        - Thai (ไทย)
+        - Armenian (Հայերեն)
+        - Georgian (ქართული)
+        - Other (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Overall, does CoCart Mono read naturally in your language?
+      options:
+        - Yes, it reads naturally
+        - Mostly, with a few problems listed below
+        - No, there are serious problems
+    validations:
+      required: true
+  - type: textarea
+    id: characters
+    attributes:
+      label: 1 · Characters that look wrong
+      description: One per line. The character, its code point if you have it, and what looks wrong or what it should look like.
+      placeholder: "ą U+0105 · the hook sits too far right"
+  - type: textarea
+    id: pairs
+    attributes:
+      label: 2 · Look-alike pairs that are confusing
+      description: Which pairs are hard to tell apart at a glance.
+      placeholder: "ő ö · hard to tell apart at 12 pt"
+  - type: textarea
+    id: text
+    attributes:
+      label: 3 · Real shop text
+      description: Anything slow to read, or any mark in the wrong place, and at which size (9, 12, 18 or 28 pt).
+  - type: textarea
+    id: answers
+    attributes:
+      label: 4 · Answers to the questions on the sheet
+  - type: textarea
+    id: sheet
+    attributes:
+      label: Filled-in review sheet
+      description: Drag the saved PDF, or a photo of a printed sheet, into this box.
+  - type: input
+    id: setup
+    attributes:
+      label: What you read it on (optional)
+      placeholder: "macOS 15, Safari · printed on paper"
+  - type: checkboxes
+    id: native
+    attributes:
+      label: Reader
+      options:
+        - label: I read this language every day.
+          required: true

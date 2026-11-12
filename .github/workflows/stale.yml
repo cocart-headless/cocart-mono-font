@@ -1,0 +1,33 @@
+name: Stale
+
+# Only issues and PRs waiting on their author ("needs-info") go stale.
+# Confirmed bugs and requests are never closed for inactivity.
+
+on:
+  schedule:
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v10
+        with:
+          only-labels: needs-info
+          days-before-stale: 14
+          days-before-close: 7
+          stale-issue-label: stale
+          stale-pr-label: stale
+          stale-issue-message: >
+            This issue has been waiting on more information for two weeks. It will close in
+            seven days unless there's a reply. You can always reopen it with the details.
+          stale-pr-message: >
+            This pull request has been waiting on changes for two weeks. It will close in
+            seven days unless there's an update.
+          close-issue-message: Closing for now. Reopen any time with the requested details.
+          close-pr-message: Closing for now. Reopen any time when it's ready.

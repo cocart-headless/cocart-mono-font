@@ -1,0 +1,19 @@
+# Blank issues stay on: the languages page's "Something looks wrong?" and "Ask for it on GitHub"
+# links open pre-filled blank issues. The triage workflow labels them.
+blank_issues_enabled: true
+contact_links:
+  - name: Review sheets for every language
+    url: https://cocart-headless.github.io/cocart-mono-font/languages.html
+    about: Pick your language and download its fillable PDF.
+  - name: Send a review by email
+    url: mailto:hello@cocartheadless.com?subject=CoCart%20Mono%20review
+    about: No GitHub account? Email the filled-in review sheet to hello@cocartheadless.com.
+  - name: Specimen and downloads
+    url: https://cocart-headless.github.io/cocart-mono-font/
+    about: Try every weight, check coverage and download the fonts.
+  - name: Latest release
+    url: https://github.com/cocart-headless/cocart-mono-font/releases/latest
+    about: The zip, its SHA-256 and the release notes.
+  - name: CoCart
+    url: https://cocartheadless.com
+    about: Questions about CoCart itself, rather than the font.
